@@ -1,48 +1,72 @@
 body {
   font-size: 16px;
-  color: #fff;
-  background: yellow; }
+  color: #F0F0F0; }
 
 a {
   text-decoration: none;
   color: #fff; }
 
 #main-wrapper {
+  width: 100%;
+  position: relative; }
+
+#wrapper-nav,
+#wrapper-portfolio,
+#wrapper-about,
+#wrapper-contacts {
+  width: 100%;
+  background-image: linear-gradient(to bottom, #400080, #000040); }
+
+#border {
+  width: 100%;
+  height: 20px;
+  background: #400080;
+  background-image: linear-gradient(to top right, transparent 50.5%, #000040 50.5%), linear-gradient(to top left, transparent 50.5%, #000040 50.5%);
+  background-repeat: repeat-x, repeat-x;
+  background-position: 0 0, 0 0;
+  background-size: 20px 20px, 20px 20px; }
+
+#wrapper-nav {
+  background: #000;
+  position: fixed;
+  height: 30px;
+  z-index: 5; }
+
+#wrapper-portfolio {
+  padding-top: 30px; }
+
+#nav,
+#portfolio,
+#about,
+#contacts {
   position: relative;
   width: 960px;
-  margin: 0 auto;
-  outline: 5px dotted maroon; }
+  margin: 0 auto; }
 
-.menu {
-  height: 30px; }
-  .menu .main-menu {
-    position: fixed;
-    margin: 0;
-    padding: 0;
-    border-bottom: 2px solid gray;
-    width: 960px;
-    height: 30px;
-    line-height: 30px;
-    text-align: right;
-    outline: 1px solid red;
-    background: #000040; }
-    .menu .main-menu li {
-      display: inline-block; }
-      .menu .main-menu li a {
-        display: block;
-        text-transform: uppercase;
-        padding: 0px 20px; }
-        .menu .main-menu li a:hover {
-          background: #fff;
-          color: blue; }
-        .menu .main-menu li a:active {
-          background: #fff;
-          color: blue; }
+.main-menu {
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px solid gray;
+  width: 960px;
+  height: 30px;
+  line-height: 30px;
+  text-align: right;
+  background: #000; }
+  .main-menu li {
+    display: inline-block; }
+    .main-menu li a {
+      display: block;
+      text-transform: uppercase;
+      padding: 0px 20px; }
+      .main-menu li a:hover {
+        background: #fff;
+        color: blue; }
+      .main-menu li a:active {
+        background: #fff;
+        color: blue; }
 
 .works {
-  padding-top: 20px;
-  background: #400080;
-  outline: 3px solid green; }
+  padding-top: 0px; }
   .works .work {
     float: left;
     width: 50%;
@@ -56,28 +80,25 @@ a {
       margin: 0 20px; }
 
 .skills {
-  padding-top: 20px;
-  background: #000040; }
+  padding: 20px 0; }
   .skills .title {
+    border: 1px solid #400080;
     text-align: center; }
   .skills .column {
     box-sizing: border-box;
     float: left;
     width: 50%;
-    padding: 20px;
-    outline: 1px solid red; }
+    padding: 20px; }
 
 .write-me {
-  padding-top: 20px;
-  background: #400080; }
+  padding-top: 20px; }
   .write-me .title {
     text-align: center; }
   .write-me .column {
     box-sizing: border-box;
     float: left;
     width: 50%;
-    padding: 20px;
-    outline: 1px solid red; }
+    padding: 20px; }
 
 .clearfix:after {
   content: '';

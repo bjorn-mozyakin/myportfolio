@@ -1,7 +1,6 @@
 body {
   font-size: 16px;
-  color: #fff;
-  background: yellow;
+  color: #F0F0F0;
 }
 
 a {
@@ -9,21 +8,61 @@ a {
   color: #fff;
 }
 
-
 #main-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+#wrapper-nav,
+#wrapper-portfolio,
+#wrapper-about,
+#wrapper-contacts {
+  width: 100%;
+  background-image: linear-gradient(to bottom, #400080, #000040);
+  //outline: 6px dotted maroon;
+}
+
+#border {
+  width: 100%;
+  height: 20px;
+  background: #400080;
+  background-image:
+    linear-gradient(to top right, transparent 50.5%, #000040 50.5%),
+    linear-gradient(to top left, transparent 50.5%, #000040 50.5%);
+  background-repeat: repeat-x, repeat-x;
+  background-position: 0 0, 0 0;
+  background-size: 20px 20px, 20px 20px;
+  //outline: 1px solid red;
+}
+
+#wrapper-nav {
+  background: #000;
+  position: fixed;
+  height: 30px;
+  z-index: 5;
+  //outline: 3px solid green;
+}
+
+#wrapper-portfolio {
+  padding-top: 30px;
+}
+
+#nav,
+#portfolio,
+#about,
+#contacts {
   position: relative;
   width: 960px;
   margin: 0 auto;
-  outline: 5px dotted maroon;
 }
 
-.menu {
-  height: 30px;
+#nav {
+  //height: 30px;
   //outline: 10px dashed green;
+}
 
   .main-menu {
-    position: fixed;
-    // position: fixed;
+    //position: fixed;
     // left: 0;
     //right: 0;
     // top: 0;
@@ -34,8 +73,10 @@ a {
     height: 30px;
     line-height: 30px;
     text-align: right;
-    outline: 1px solid red;
-    background: #000040;
+    //outline: 1px solid red;
+    background: #000;
+    //z-index: 5;
+
 
     li {
       display: inline-block;
@@ -58,13 +99,13 @@ a {
       }
     }
   }
-}
 
 
 .works {
-  padding-top: 20px;
-  background: #400080;
-  outline: 3px solid green;
+  padding-top: 0px;
+ // background-image: linear-gradient(#400080, #000040);
+//  outline: 3px solid green;
+
 
   .work {
     float: left;
@@ -87,18 +128,25 @@ a {
 }
 
 .skills {
-  padding-top: 20px;
-  background: #000040;
+//margin: 40px 0;
+//border: 10px solid transparent;
+//border-width: 10px 0;
+//background: linear-gradient(#400080, #000040) repeat 0 0 auto auto;
+padding: 20px 0;
 
   .title {
+    border: 1px solid #400080;
+    //margin: 0;
+    //padding: 0;
     text-align: center;
   }
+
   .column {
     box-sizing: border-box;
     float: left;
     width: 50%;
     padding: 20px;
-    outline: 1px solid red;
+   //outline: 1px solid red;
   }
 }
 
@@ -106,7 +154,7 @@ a {
 
 .write-me {
   padding-top: 20px;
-  background: #400080;
+//  background-image: linear-gradient(#400080, #000040);
 
   .title {
     text-align: center;
@@ -116,7 +164,7 @@ a {
     float: left;
     width: 50%;
     padding: 20px;
-    outline: 1px solid red;
+    //outline: 1px solid red;
   }
 }
 
