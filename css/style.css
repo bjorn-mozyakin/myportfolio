@@ -1,0 +1,87 @@
+body {
+  font-size: 16px;
+  color: #fff;
+  background: yellow; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+#main-wrapper {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  outline: 5px dotted maroon; }
+
+.menu {
+  height: 30px; }
+  .menu .main-menu {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid gray;
+    width: 960px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    outline: 1px solid red;
+    background: #000040; }
+    .menu .main-menu li {
+      display: inline-block; }
+      .menu .main-menu li a {
+        display: block;
+        text-transform: uppercase;
+        padding: 0px 20px; }
+        .menu .main-menu li a:hover {
+          background: #fff;
+          color: blue; }
+        .menu .main-menu li a:active {
+          background: #fff;
+          color: blue; }
+
+.works {
+  padding-top: 20px;
+  background: #400080;
+  outline: 3px solid green; }
+  .works .work {
+    float: left;
+    width: 50%;
+    height: 300px; }
+    .works .work .site img {
+      float: left;
+      width: 150px;
+      height: 100px;
+      border: 1px solid gray;
+      border-radius: 5px;
+      margin: 0 20px; }
+
+.skills {
+  padding-top: 20px;
+  background: #000040; }
+  .skills .title {
+    text-align: center; }
+  .skills .column {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding: 20px;
+    outline: 1px solid red; }
+
+.write-me {
+  padding-top: 20px;
+  background: #400080; }
+  .write-me .title {
+    text-align: center; }
+  .write-me .column {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding: 20px;
+    outline: 1px solid red; }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+/*# sourceMappingURL=style.css.map */
