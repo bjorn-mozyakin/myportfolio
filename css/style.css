@@ -1,4 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic&subset=latin,cyrillic);
 body {
+  font-family: 'Open Sans', Times, Helvetica, Arial, sans;
   font-size: 16px;
   color: #F0F0F0; }
 
@@ -15,25 +17,26 @@ a {
 #wrapper-about,
 #wrapper-contacts {
   width: 100%;
-  background-image: linear-gradient(to bottom, #400080, #000040); }
+  background-image: linear-gradient(to bottom, #260338, #3D1154); }
 
 #border {
   width: 100%;
   height: 20px;
-  background: #400080;
-  background-image: linear-gradient(to top right, transparent 50.5%, #000040 50.5%), linear-gradient(to top left, transparent 50.5%, #000040 50.5%);
+  background: #260338;
+  background-image: linear-gradient(to top right, transparent 50.5%, #3D1154 50.5%), linear-gradient(to top left, transparent 50.5%, #3D1154 50.5%);
   background-repeat: repeat-x, repeat-x;
   background-position: 0 0, 0 0;
   background-size: 20px 20px, 20px 20px; }
 
 #wrapper-nav {
-  background: #000;
+  background: #160121;
   position: fixed;
-  height: 30px;
-  z-index: 5; }
+  height: 50px;
+  z-index: 5;
+  border-bottom: 2px solid gray; }
 
 #wrapper-portfolio {
-  padding-top: 30px; }
+  padding-top: 50px; }
 
 #nav,
 #portfolio,
@@ -46,24 +49,24 @@ a {
 .main-menu {
   margin: 0;
   padding: 0;
-  border-bottom: 2px solid gray;
   width: 960px;
-  height: 30px;
+  height: 50px;
   line-height: 30px;
-  text-align: right;
-  background: #000; }
+  text-align: right; }
   .main-menu li {
     display: inline-block; }
     .main-menu li a {
       display: block;
       text-transform: uppercase;
-      padding: 0px 20px; }
+      padding: 0px 20px;
+      line-height: 50px;
+      font-weight: bold; }
       .main-menu li a:hover {
         background: #fff;
-        color: blue; }
+        color: #260338; }
       .main-menu li a:active {
         background: #fff;
-        color: blue; }
+        color: #260338; }
 
 .works {
   padding-top: 0px; }
@@ -82,13 +85,19 @@ a {
 .skills {
   padding: 20px 0; }
   .skills .title {
-    border: 1px solid #400080;
+    border: 1px solid #260338;
     text-align: center; }
-  .skills .column {
+  .skills .column1,
+  .skills .column2 {
     box-sizing: border-box;
     float: left;
     width: 50%;
     padding: 20px; }
+    .skills .column1 li,
+    .skills .column2 li {
+      list-style-image: url(/img/icon-tick.png); }
+  .skills .column2 {
+    width: 50%; }
 
 .write-me {
   padding-top: 20px; }
@@ -99,6 +108,40 @@ a {
     float: left;
     width: 50%;
     padding: 20px; }
+    .write-me .column label {
+      display: block;
+      margin: 20px 0 10px 0; }
+    .write-me .column input {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      height: 40px;
+      border-radius: 5px; }
+      .write-me .column input[type="area"] {
+        height: 150px; }
+      .write-me .column input[type="submit"] {
+        box-sizing: border-box;
+        height: 50px;
+        margin-top: 30px;
+        border: 2px solid #260338;
+        font-weight: bold;
+        color: #260338;
+        background: linear-gradient(to bottom, #ebc402, #ba9d0b); }
+    .write-me .column .icon {
+      padding-left: 35px;
+      height: 25px;
+      margin: 5px 0; }
+      .write-me .column .icon:before {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        outline: 1px solid red; }
+    .write-me .column .email {
+      background: url("http://portfolio-rakov.ru/img/icon-email.png") no-repeat; }
+    .write-me .column .skype {
+      background: url("http://portfolio-rakov.ru/img/icon-skype.png") no-repeat; }
+    .write-me .column .icq {
+      background: url("http://portfolio-rakov.ru/img/icon-icq.png") no-repeat; }
 
 .clearfix:after {
   content: '';

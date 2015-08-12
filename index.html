@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Портфолио Ракова Дмитрия</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
 <body>
   <div id="main-wrapper">
@@ -19,8 +21,7 @@
     </div>
 
     <div id="wrapper-portfolio">
-      <div id="portfolio">
-        <section class="works clearfix">
+        <section id = "portfolio" class="works clearfix">
           <div class="work">
             <div class="site clearfix">
               <img src="img/1.png" alt="">
@@ -70,18 +71,16 @@
             </div>
           </div>
         </section>
-      </div>
     </div>
 
   <div id="border"></div>
   <div id="wrapper-about">
-    <div id="about">
-      <section class="skills clearfix">
+      <section id="about" class="skills clearfix">
         <header class="title">
           <h1>Раков Дмитрий</h1>
           <h2>HTML-верстальщик / Frontend-разработчик</h2>
         </header>
-        <div class="column">
+        <div class="column1">
           <h3>Основные навыки</h3>
           <ul>
             <li>Верстка собственных шаблонов (HTML5, CSS3)</li>
@@ -96,7 +95,7 @@
           </ul>
           <p><a href="files/rakov-resume.pdf">Скачать полное резюме (в формате pdf)</a></p>
         </div>
-        <div class="column">
+        <div class="column2">
           <h3>Основные технологи</h3>
           <ul>
             <li>HTML5</li>
@@ -110,41 +109,35 @@
           </ul>
           <h3>Дополнительные навыки</h3>
           <ul>
-            <li>Английский - выше-среднего (Upper-Intermediate)
-              <ul>
-                <li>читаю профессиональную литературу</li>
-                <li>могу вести деловую переписку</li>
-                <li>могу общаться на общие темы</li>
-              </ul>
+            <li>Английский (Intermediate - Upper-Intermediate) - могу вести деловую переписку, читать профессиональную литературу и общаться на общие темы</li>
             <li>Испанский - базовые знания</li>
             <li>Владею навыками слепой печати (русский/английский)</li>
           </ul>
         </div>
       </section>
-    </div>
   </div>
   <div id="border"></div>
 
   <div id="wrapper-contacts">
-    <div id="contacts">
-      <section class="write-me clearfix">
+      <section id="contacts" class="write-me clearfix">
         <div class="column">
           <form action="">
-            <input type="text">
-            <input type="text">
-            <input type="area">
+            <label for="name">Имя</label>
+            <input id = "name" type="text">
+            <label for="contact">Контакты</label>
+            <input id="contact" type="text">
+            <label for="message">Сообщение</label>
+            <input id="message" type="area">
             <input type="submit">
           </form>
         </div>
         <div class="column">
           <h3>Контактные данные</h3>
-          <ul>
-          <li><strong>e-mail:</strong> rakov.di@gmail.com</li>
-          <li><strong>Skype:</strong> rakov.di</li>
-          <li><strong>ICQ:</strong> 420-896-597</li>
+          <div class="icon email">rakov.di@gmail.com</div>
+          <div class="icon skype">rakov.di</div>
+          <div class="icon icq">420-896-597</div>
         </div>
       </section>
-    </div>
   </div>
 </body>
 </html>
