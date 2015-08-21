@@ -1,21 +1,106 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic&subset=latin,cyrillic);
+//@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic&subset=latin,cyrillic);
+
+/* font-family: "LatoRegular"; */
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/LatoRegular/LatoRegular.eot");
+    src: url("../fonts/LatoRegular/LatoRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/LatoRegular/LatoRegular.woff") format("woff"),
+    url("../fonts/LatoRegular/LatoRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/LatoItalic/LatoItalic.eot");
+    src: url("../fonts/LatoItalic/LatoItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/LatoItalic/LatoItalic.woff") format("woff"),
+    url("../fonts/LatoItalic/LatoItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/LatoBold/LatoBold.eot");
+    src: url("../fonts/LatoBold/LatoBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/LatoBold/LatoBold.woff") format("woff"),
+    url("../fonts/LatoBold/LatoBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "LatoLight";
+    src: url("../fonts/LatoLight/LatoLight.eot");
+    src: url("../fonts/LatoLight/LatoLight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/LatoLight/LatoLight.woff") format("woff"),
+    url("../fonts/LatoLight/LatoLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "LatoLight";
+    src: url("../fonts/LatoLightItalic/LatoLightItalic.eot");
+    src: url("../fonts/LatoLightItalic/LatoLightItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/LatoLightItalic/LatoLightItalic.woff") format("woff"),
+    url("../fonts/LatoLightItalic/LatoLightItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "LatoLight";
+    src: url("../fonts/LatoBold/LatoBold.eot");
+    src: url("../fonts/LatoBold/LatoBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/LatoBold/LatoBold.woff") format("woff"),
+    url("../fonts/LatoBold/LatoBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: bold;
+}
+
 
 $purpleLight: #3D1154;
 $purpleDark: #260338;
 $colorAlmostBlack: #160121;
 $colorGold: #ebc402;
 $colorDarkGold: #ba9d0b;
+$colorWhite: #fff;
 
 body {
-  font-family: 'Open Sans', Times, Helvetica, Arial, sans;
+  font-family: LatoLight, Times, Helvetica, Arial, sans;
+  //font-family: "LatoLight";
   font-size: 16px;
+  //line-height: 1.6;
   color: #F0F0F0;
 }
 
 a {
   text-decoration: none;
-  color: #fff;
+    color: $colorDarkGold;
+  //color: #fff;
+
+  &:hover {
+  color: $colorGold;
+    //text-decoration: underline;
+  }
 }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+li {
+  margin: 6px 0;
+  list-style-image: url(/img/icon-tick.png);
+  //outline: 1px solid lime;
+}
+
+  .title {
+    text-align: center;
+  }
 
 #main-wrapper {
   width: 100%;
@@ -25,7 +110,8 @@ a {
 #wrapper-nav,
 #wrapper-portfolio,
 #wrapper-about,
-#wrapper-contacts {
+#wrapper-contacts,
+#wrapper-acdc {
   width: 100%;
   background-image: linear-gradient(to bottom, $purpleDark, $purpleLight);
   //outline: 6px dotted maroon;
@@ -60,89 +146,143 @@ a {
 #nav,
 #portfolio,
 #about,
-#contacts {
+#contacts,
+#acdc {
   position: relative;
   width: 960px;
   margin: 0 auto;
-}
-
-#nav {
-  //height: 30px;
+  padding: 50px 0;
   //outline: 10px dashed green;
 }
 
-  .main-menu {
-    //position: fixed;
-    // left: 0;
-    //right: 0;
-    // top: 0;
+#nav {
+  padding: 0;
+}
+
+.main-menu {
+  //position: fixed;
+  // left: 0;
+  //right: 0;
+  // top: 0;
+  margin: 0;
+  padding: 0;
+  width: 960px;
+  height: 50px;
+  //line-height: 30px;
+  text-align: right;
+  //outline: 1px solid red;
+  //background: #000;
+  //z-index: 5;
+
+  li {
     margin: 0;
     padding: 0;
-    width: 960px;
-    height: 50px;
-    line-height: 30px;
-    text-align: right;
-    //outline: 1px solid red;
-    //background: #000;
-    //z-index: 5;
+    display: inline-block;
 
-    li {
-      display: inline-block;
+    a {
+      display: block;
+      text-transform: uppercase;
+      padding: 0px 20px;
+      line-height: 50px;
+      font-weight: bold;
+      color: $colorWhite;
+      //outline: 1px solid green;
 
-      a {
-        display: block;
-        text-transform: uppercase;
-        padding: 0px 20px;
-        line-height: 50px;
-        font-weight: bold;
-
-        &:hover {
-          background: #fff;
-          color: $purpleDark;
-        }
-
-        &:active {
-          background: #fff;
-          color: $purpleDark;
-        }
-
+      &:hover {
+        background: #fff;
+        color: $purpleDark;
       }
+
+      &:active {
+        background: #fff;
+        color: $purpleDark;
+      }
+
     }
   }
-
+}
 
 .works {
   padding-top: 0px;
- // background-image: linear-gradient($purpleDark, $purpleLight);
-//  outline: 3px solid green;
-
+  // background-image: linear-gradient($purpleDark, $purpleLight);
+  //  outline: 3px solid green;
 
   .work {
     float: left;
     //box-sizing: border-box;
+    box-sizing: border-box;
     width: 50%;
-    height: 300px;
-    //border: 1px solid gray;
+    margin: 20px 0;
+    //height: 250px;
+    //outline: 1px solid gray;
 
-    .site {
+    &:nth-child(2n+1) {
+      padding-right: 30px;
+    }
+
+    &:nth-child(2n) {
+      padding-left: 30px;
+    }
+
+    img {
+      opacity: 0.8;
+      //border: 2px solid transparent;
+    }
+
+    a:hover {
       img {
-        float: left;
-        width: 150px;
-        height: 100px;
-        border: 1px solid gray;
-        border-radius: 5px;
-        margin: 0 20px;
+        opacity: 1;
+        //border: 2px solid $colorGold;
+        box-shadow: 0 0 6px $colorGold;
       }
+    }
+
+    .work__main-info {
+      margin-bottom: 0px;
+      //outline: 1px solid red;
+
+      .work__main-info_img {
+        float: left;
+        //display: inline-block;
+        width: 200px;
+        height: 150px;
+        //outline: 1px solid gray;
+        margin-right: 20px;
+
+        img {
+          border-radius: 5px;
+        }
+      }
+
+      .work__main-info_name {
+        //float: right;
+        //outline: 2px dotted yellow;
+
+        h2, h4 {
+          margin: 0;
+          padding: 0;
+        }
+
+        h2 {
+          margin-bottom: 20px
+        }
+      }
+    }
+
+    .work__description {
+      clear: both;
+      //outline: 2px dashed blue;
+
     }
   }
 }
 
 .skills {
-//margin: 40px 0;
-//border: 10px solid transparent;
-//border-width: 10px 0;
-//background: linear-gradient($purpleDark, $purpleLight) repeat 0 0 auto auto;
-padding: 20px 0;
+  //margin: 40px 0;
+  //border: 10px solid transparent;
+  //border-width: 10px 0;
+  //background: linear-gradient($purpleDark, $purpleLight) repeat 0 0 auto auto;
+  padding: 20px 0;
 
   .title {
     border: 1px solid $purpleDark;
@@ -158,10 +298,6 @@ padding: 20px 0;
     width: 50%;
     padding: 20px;
 
-    li {
-      list-style-image: url(/img/icon-tick.png);
-      //outline: 1px solid lime;
-    }
    //outline: 1px solid red;
   }
 
@@ -170,15 +306,10 @@ padding: 20px 0;
   }
 }
 
-
-
 .write-me {
   padding-top: 20px;
-//  background-image: linear-gradient($purpleDark, $purpleLight);
+  //  background-image: linear-gradient($purpleDark, $purpleLight);
 
-  .title {
-    text-align: center;
-  }
   .column {
     box-sizing: border-box;
     float: left;
@@ -240,6 +371,15 @@ padding: 20px 0;
       background:url('http://portfolio-rakov.ru/img/icon-icq.png') no-repeat;
     }
 
+  }
+}
+
+#acdc {
+
+  //outline: 1px solid orange;
+
+  audio {
+    width: 100%;
   }
 }
 
