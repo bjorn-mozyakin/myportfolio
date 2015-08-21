@@ -101,11 +101,16 @@ li {
 #nav {
   padding: 0; }
 
+.logo {
+  float: left;
+  text-transform: uppercase;
+  line-height: 50px; }
+
 .main-menu {
   margin: 0;
   padding: 0;
-  width: 960px;
   height: 50px;
+  width: 100%;
   text-align: right; }
   .main-menu li {
     margin: 0;
@@ -125,94 +130,102 @@ li {
         background: #fff;
         color: #260338; }
 
-.works {
-  padding-top: 0px; }
-  .works .work {
-    float: left;
-    box-sizing: border-box;
-    width: 50%;
-    margin: 20px 0; }
-    .works .work:nth-child(2n+1) {
-      padding-right: 30px; }
-    .works .work:nth-child(2n) {
-      padding-left: 30px; }
-    .works .work img {
-      opacity: 0.8; }
-    .works .work a:hover img {
-      opacity: 1;
-      box-shadow: 0 0 6px #ebc402; }
-    .works .work .work__main-info {
-      margin-bottom: 0px; }
-      .works .work .work__main-info .work__main-info_img {
-        float: left;
-        width: 200px;
-        height: 150px;
-        margin-right: 20px; }
-        .works .work .work__main-info .work__main-info_img img {
-          border-radius: 5px; }
-      .works .work .work__main-info .work__main-info_name h2, .works .work .work__main-info .work__main-info_name h4 {
-        margin: 0;
-        padding: 0; }
-      .works .work .work__main-info .work__main-info_name h2 {
-        margin-bottom: 20px; }
-    .works .work .work__description {
-      clear: both; }
+.works .work {
+  float: left;
+  box-sizing: border-box;
+  width: 50%;
+  margin: 20px 0; }
+  .works .work:nth-child(2n+1) {
+    padding-right: 30px; }
+  .works .work:nth-child(2n) {
+    padding-left: 30px; }
+  .works .work img {
+    opacity: 0.8; }
+  .works .work a:hover img {
+    opacity: 1;
+    box-shadow: 0 0 6px #ebc402; }
+  .works .work .work__main-info {
+    margin-bottom: 0px; }
+    .works .work .work__main-info .work__main-info_img {
+      float: left;
+      width: 200px;
+      height: 150px;
+      margin-right: 20px; }
+      .works .work .work__main-info .work__main-info_img img {
+        border-radius: 5px; }
+    .works .work .work__main-info .work__main-info_name h2, .works .work .work__main-info .work__main-info_name h4 {
+      margin: 0;
+      padding: 0; }
+    .works .work .work__main-info .work__main-info_name h2 {
+      margin-bottom: 20px; }
+  .works .work .work__description {
+    clear: both; }
 
-.skills {
-  padding: 20px 0; }
-  .skills .title {
-    border: 1px solid #260338;
-    text-align: center; }
-  .skills .column1,
-  .skills .column2 {
-    box-sizing: border-box;
-    float: left;
-    width: 50%;
-    padding: 20px; }
-  .skills .column2 {
-    width: 50%; }
+.skills .title {
+  border: 1px solid #260338;
+  text-align: center; }
+.skills .skills,
+.skills .additional-skills {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding: 20px; }
+.skills .line-through {
+  text-decoration: line-through; }
+.skills .cv {
+  clear: both;
+  text-align: center; }
 
-.write-me {
-  padding-top: 20px; }
-  .write-me .column {
+.form {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding: 0 20px; }
+  .form label {
+    display: block;
+    margin: 10px 0 5px 0; }
+  .form input {
     box-sizing: border-box;
-    float: left;
-    width: 50%;
-    padding: 20px; }
-    .write-me .column label {
-      display: block;
-      margin: 20px 0 10px 0; }
-    .write-me .column input {
+    display: block;
+    width: 75%;
+    height: 30px;
+    border-radius: 5px; }
+    .form input[type="area"] {
+      height: 100px; }
+    .form input[type="submit"] {
       box-sizing: border-box;
-      display: block;
-      width: 100%;
-      height: 40px;
-      border-radius: 5px; }
-      .write-me .column input[type="area"] {
-        height: 150px; }
-      .write-me .column input[type="submit"] {
-        box-sizing: border-box;
-        height: 50px;
-        margin-top: 30px;
-        border: 2px solid #260338;
-        font-weight: bold;
-        color: #260338;
-        background: linear-gradient(to bottom, #ebc402, #ba9d0b); }
-    .write-me .column .icon {
-      padding-left: 35px;
-      height: 25px;
-      margin: 5px 0; }
-      .write-me .column .icon:before {
-        display: inline-block;
-        width: 25px;
-        height: 25px;
-        outline: 1px solid red; }
-    .write-me .column .email {
-      background: url("http://portfolio-rakov.ru/img/icon-email.png") no-repeat; }
-    .write-me .column .skype {
-      background: url("http://portfolio-rakov.ru/img/icon-skype.png") no-repeat; }
-    .write-me .column .icq {
-      background: url("http://portfolio-rakov.ru/img/icon-icq.png") no-repeat; }
+      height: 50px;
+      margin-top: 20px;
+      border: 2px solid #260338;
+      font-weight: bold;
+      color: #260338;
+      background: linear-gradient(to bottom, #ebc402, #ba9d0b); }
+
+.other-contacts {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding: 0 20px;
+  margin-bottom: 16px; }
+  .other-contacts .contact {
+    line-height: 40px;
+    height: 40px; }
+    .other-contacts .contact:first-child {
+      padding-top: 60px; }
+  .other-contacts .icon {
+    vertical-align: middle;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    margin-right: 10px; }
+  .other-contacts .email {
+    background: url("http://portfolio-rakov.ru/img/icon-email.png") no-repeat; }
+  .other-contacts .skype {
+    background: url("http://portfolio-rakov.ru/img/icon-skype.png") no-repeat; }
+  .other-contacts .icq {
+    background: url("http://portfolio-rakov.ru/img/icon-icq.png") no-repeat; }
+  .other-contacts .hh {
+    background: url("http://portfolio-rakov.ru/img/icon-hh.png") no-repeat; }
 
 #acdc audio {
   width: 100%; }

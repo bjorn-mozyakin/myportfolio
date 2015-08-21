@@ -12,6 +12,9 @@
   <div id="main-wrapper">
     <div id="wrapper-nav">
       <nav id="nav">
+        <div class="logo">
+          <h2><a href="/">Crablog.ru</a></h2>
+        </div>
         <ul class="main-menu">
           <li><a href="#portfolio">Портфолио</a></li>
           <li><a href="#about">Обо мне</a></li>
@@ -40,9 +43,10 @@
             </div>
             <div class="work__description">
               <ul>
-                <li>Собственный шаблон</li>
-                <li>Интеграция с Joomla</li>
-                <li>Кроссбраузерная (IE9+, Chrome, Mozilla, Opera, Safari, Android), адаптивная верстка</li>
+                <li>Верстка шаблона</li>
+                <li>Интеграция с CMS Joomla</li>
+                <li>Кроссбраузерность (IE9+, Chrome, Mozilla, Opera, Safari, Android)</li>
+                <li>Адаптивность (минимальное разрешение - 320px)</li>
               </ul>
             </div>
           </div>
@@ -60,9 +64,10 @@
             </div>
             <div class="work__description">
               <ul>
-                <li>Собственный шаблон</li>
-                <li>Интеграция с Joomla</li>
-                <li>Кроссбраузерная (IE9+, Chrome, Mozilla, Opera, Safari, Android), адаптивная верстка</li>
+                <li>Верстка шаблона</li>
+                <li>Интеграция с CMS Joomla</li>
+                <li>Кроссбраузерность (IE9+, Chrome, Mozilla, Opera, Safari, Android)</li>
+                <li>Адаптивность (минимальное разрешение - 320px)</li>
               </ul>
             </div>
           </div>
@@ -81,9 +86,10 @@
             </div>
             <div class="work__description">
               <ul>
-                <li>Собственный шаблон</li>
+                <li>Верстка шаблона</li>
                 <li>Интеграция с CMS WordPress</li>
-                <li>Кроссбраузерная (IE9+, Chrome, Mozilla, Opera, Safari, Android), адаптивная верстка</li>
+                <li>Кроссбраузерность (IE9+, Chrome, Mozilla, Opera, Safari, Android)</li>
+                <li>Адаптивность (минимальное разрешение - 320px)</li>
               </ul>
             </div>
           </div>
@@ -101,9 +107,10 @@
             </div>
             <div class="work__description">
               <ul>
-                <li>Собственный шаблон</li>
+                <li>Верстка шаблона</li>
                 <li>Интеграция с CMS WordPress</li>
-                <li>Кроссбраузерная (IE8+, Chrome, Mozilla, Opera, Safari, Android), адаптивная верстка</li>
+                <li>Кроссбраузерность (IE8+, Chrome, Mozilla, Opera, Safari, Android)</li>
+                <li>Адаптивность (минимальное разрешение - 320px)</li>
               </ul>
             </div>
           </div>
@@ -156,7 +163,7 @@
           <h1>Раков Дмитрий</h1>
           <h2>HTML-верстальщик / Frontend-разработчик</h2>
         </header>
-        <div class="column1">
+        <div class="skills">
           <h3>Основные навыки</h3>
           <ul>
             <li>Верстка собственных шаблонов (HTML5, CSS3)</li>
@@ -168,10 +175,10 @@
             <li>Способность разбираться в чужом коде</li>
             <li>Опыт использования SVN при работе над проектами (Git)</li>
             <li>Опыт работы в команде с веб-дизайнером</li>
+            <li class="line-through">Могу стишок рассказать, могу розочку из бумаги сделать, могу мандаринами пожонглировать</li>
           </ul>
-          <p>Полное резюме можно запросить через форму ниже, либо посмотреть на HeadHunter</a></p>
         </div>
-        <div class="column2">
+        <div class="additional-skills">
           <h3>Основные технологи</h3>
           <ul>
             <li>HTML5</li>
@@ -189,32 +196,36 @@
             <li>Испанский - базовые знания</li>
           </ul>
         </div>
+        <div class="cv">
+          <p>Полное резюме можно <a target="_blank" href="http://hh.ru/resume/f9eecb22ff029de4100039ed1f4963424f7235" target="_blank" title="Посмотреть профиль">посмотреть на HeadHunter</a></p>
+        </div>
       </section>
     </div>
 
     <div id="border"></div>
 
     <div id="wrapper-contacts">
-      <section id="contacts" class="write-me clearfix">
+      <section id="contacts" class="clearfix">
         <header class="title">
           <h1>Контактная информация</h1>
         </header>
-        <div class="column">
+        <div class="form">
           <h2>Напишите мне сюда</h2>
           <form action="">
             <label for="name">Имя</label>
-            <input id = "name" type="text">
-            <label for="contact">Контакты</label>
-            <input id="contact" type="text">
+            <input id = "name" type="text" placeholder="Например: Олег Петров">
+            <label for="contact">Контактный e-mail</label>
+            <input id="contact" type="text" placeholder="Например: petrov@mail.ru">
             <label for="message">Сообщение</label>
             <input id="message" type="area">
             <input type="submit">
           </form>
         </div>
-        <div class="column">
+        <div class="other-contacts">
           <h2>Или сюда</h2>
-          <div class="icon email">rakov.di@gmail.com</div>
-          <div class="icon skype">rakov.di</div>
+          <div class="contact"><span class="icon email"></span><a target="_blank" href="mailto:rakov.di@gmail.com" title="Написать письмо">rakov.di@gmail.com</a></div>
+          <div class="contact"><span class="icon skype"></span>rakov.di</div>
+          <div class="contact"><span class="icon hh"></span><a target="_blank" href="http://hh.ru/resume/f9eecb22ff029de4100039ed1f4963424f7235" target="_blank" title="Посмотреть профиль">Профиль на HeadHunter</a></div>
         </div>
       </section>
     </div>

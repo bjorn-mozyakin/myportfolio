@@ -1,5 +1,12 @@
 //@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic&subset=latin,cyrillic);
 
+$purpleLight: #3D1154;
+$purpleDark: #260338;
+$colorAlmostBlack: #160121;
+$colorGold: #ebc402;
+$colorDarkGold: #ba9d0b;
+$colorWhite: #fff;
+
 /* font-family: "LatoRegular"; */
 @font-face {
     font-family: "Lato";
@@ -60,14 +67,6 @@
     font-style: normal;
     font-weight: bold;
 }
-
-
-$purpleLight: #3D1154;
-$purpleDark: #260338;
-$colorAlmostBlack: #160121;
-$colorGold: #ebc402;
-$colorDarkGold: #ba9d0b;
-$colorWhite: #fff;
 
 body {
   font-family: LatoLight, Times, Helvetica, Arial, sans;
@@ -159,6 +158,11 @@ li {
   padding: 0;
 }
 
+.logo {
+  float: left;
+  text-transform: uppercase;
+  line-height: 50px;
+}
 .main-menu {
   //position: fixed;
   // left: 0;
@@ -166,8 +170,8 @@ li {
   // top: 0;
   margin: 0;
   padding: 0;
-  width: 960px;
   height: 50px;
+  width: 100%;
   //line-height: 30px;
   text-align: right;
   //outline: 1px solid red;
@@ -203,7 +207,7 @@ li {
 }
 
 .works {
-  padding-top: 0px;
+  //padding-top: 0px;
   // background-image: linear-gradient($purpleDark, $purpleLight);
   //  outline: 3px solid green;
 
@@ -282,7 +286,7 @@ li {
   //border: 10px solid transparent;
   //border-width: 10px 0;
   //background: linear-gradient($purpleDark, $purpleLight) repeat 0 0 auto auto;
-  padding: 20px 0;
+  //padding: 20px 0;
 
   .title {
     border: 1px solid $purpleDark;
@@ -291,72 +295,87 @@ li {
     text-align: center;
   }
 
-  .column1,
-  .column2 {
+  .skills,
+  .additional-skills {
     box-sizing: border-box;
     float: left;
     width: 50%;
     padding: 20px;
-
    //outline: 1px solid red;
   }
 
-  .column2 {
-    width: 50%;
+  .line-through {
+    text-decoration: line-through;
+  }
+
+  .cv {
+    clear: both;
+    text-align: center;
   }
 }
 
-.write-me {
-  padding-top: 20px;
-  //  background-image: linear-gradient($purpleDark, $purpleLight);
-
-  .column {
+  .form {
     box-sizing: border-box;
     float: left;
     width: 50%;
-    padding: 20px;
+    padding: 0 20px;
     //outline: 1px solid red;
 
-  label {
-    display: block;
-    margin: 20px 0 10px 0;
-    //outline: 1px dotted green;
-
-  }
-
-  input {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    height: 40px;
-    border-radius: 5px;
-
-    &[type="area"] {
-      height: 150px;
+    label {
+      display: block;
+      margin: 10px 0 5px 0;
+      //outline: 1px dotted green;
     }
 
-    &[type="submit"] {
+    input {
       box-sizing: border-box;
-      height: 50px;
-      margin-top: 30px;
-      border: 2px solid $purpleDark;
-      font-weight: bold;
-      color: $purpleDark;
-      background: linear-gradient(to bottom, $colorGold, $colorDarkGold);
+      display: block;
+      width: 75%;
+      height: 30px;
+      border-radius: 5px;
+
+      &[type="area"] {
+        height: 100px;
+      }
+
+      &[type="submit"] {
+        box-sizing: border-box;
+        height: 50px;
+        margin-top: 20px;
+        border: 2px solid $purpleDark;
+        font-weight: bold;
+        color: $purpleDark;
+        background: linear-gradient(to bottom, $colorGold, $colorDarkGold);
+      }
     }
   }
+
+.other-contacts {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding: 0 20px;
+    margin-bottom: 16px;
+
+    .contact {
+      //display: inline-block;
+      //vertical-align: middle;
+      line-height: 40px;
+      height: 40px;
+      //outline: 1px dotted green;
+
+      &:first-child {
+        padding-top: 60px;
+      }
+    }
 
     .icon {
-      padding-left: 35px;
-              height: 25px;
-              margin: 5px 0;
-
-      &:before {
-        display: inline-block;
-        width: 25px;
-        height: 25px;
-        outline: 1px solid red;
-      }
+       vertical-align: middle;
+       display: inline-block;
+       height: 25px;
+       width: 25px;
+       margin-right: 10px;
+       //outline: 1px solid red;
     }
 
     .email {
@@ -371,7 +390,10 @@ li {
       background:url('http://portfolio-rakov.ru/img/icon-icq.png') no-repeat;
     }
 
-  }
+    .hh {
+      background:url('http://portfolio-rakov.ru/img/icon-hh.png') no-repeat;
+    }
+
 }
 
 #acdc {
