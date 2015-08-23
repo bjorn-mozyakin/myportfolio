@@ -1,0 +1,351 @@
+$colorNavBg: #262626;
+$colorNavText: #d9d9d9;
+$colorNavTextActive: #d65b55;
+
+$colorHeaderBg: #2a2a2a;
+
+$colorServicesBg: #f8f8f8;
+$colorSeviceText: #616161;
+
+$colorButtonText: #fff;
+$colorButtonBg: #d65b55;
+
+$colorButtonActiveBg: #616161;
+
+/* font-family: "LatoRegular"; */
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/LatoRegular/LatoRegular.eot");
+    src: url("../fonts/LatoRegular/LatoRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/LatoRegular/LatoRegular.woff") format("woff"),
+    url("../fonts/LatoRegular/LatoRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/LatoItalic/LatoItalic.eot");
+    src: url("../fonts/LatoItalic/LatoItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/LatoItalic/LatoItalic.woff") format("woff"),
+    url("../fonts/LatoItalic/LatoItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/LatoBold/LatoBold.eot");
+    src: url("../fonts/LatoBold/LatoBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/LatoBold/LatoBold.woff") format("woff"),
+    url("../fonts/LatoBold/LatoBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "LatoLight";
+    src: url("../fonts/LatoLight/LatoLight.eot");
+    src: url("../fonts/LatoLight/LatoLight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/LatoLight/LatoLight.woff") format("woff"),
+    url("../fonts/LatoLight/LatoLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "LatoLight";
+    src: url("../fonts/LatoLightItalic/LatoLightItalic.eot");
+    src: url("../fonts/LatoLightItalic/LatoLightItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/LatoLightItalic/LatoLightItalic.woff") format("woff"),
+    url("../fonts/LatoLightItalic/LatoLightItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "LatoLight";
+    src: url("../fonts/LatoBold/LatoBold.eot");
+    src: url("../fonts/LatoBold/LatoBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/LatoBold/LatoBold.woff") format("woff"),
+    url("../fonts/LatoBold/LatoBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: bold;
+}
+
+body {
+  font-family: Lato;
+  font-size: 14px;
+}
+
+a {
+  color: $colorNavText;
+  text-decoration: none;
+
+  &:hover,
+  &.active {
+    color: $colorNavTextActive;
+  }
+}
+
+button {
+  padding: 15px 20px;
+  margin: 0 3px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  color: $colorButtonText;
+  background: $colorButtonBg;
+
+  &:hover,
+  &[data-active="true"] {
+    background: $colorButtonActiveBg;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+
+
+.wrapper-nav {
+  width: 100%;
+  height: 100px;
+  background: $colorNavBg;
+
+  .nav {
+    width: 1110px;
+    margin: 0 auto;
+    line-height: 100px;
+    color: $colorNavText;
+
+    .logo {
+      float: left;
+      //outline: 1px solid orange;
+
+      img {
+        vertical-align: middle;
+        //outline: 1px dotted blue;
+      }
+    }
+
+    .menu {
+      float: right;
+      margin: 0;
+      padding: 0;
+      margin-right: 20px;
+      list-style: none;
+      text-transform: uppercase;
+      text-align: right;
+      //outline: 1px solid red;
+
+      li {
+        display: inline-block;
+        padding-right: 50px;
+
+        &:last-child {
+          padding-right: 0;
+        }
+
+      }
+    }
+  }
+}
+
+.wrapper-slider{
+  width: 100%;
+  //height: 395px;
+  background: $colorHeaderBg;
+
+  .slider {
+    width: 1110px;
+    margin: 0 auto;
+    padding: 60px 0;
+    font-family: Lato;
+    text-align: center;
+    color: $colorNavText;
+    font-family: LatoLight;
+    //outline: 1px solid yellow;
+
+    h1, h2 {
+      font-weight: normal;
+    }
+
+    button {
+      padding: 15px 50px;
+    }
+  }
+}
+
+.wrapper-services{
+  width: 100%;
+  background: $colorServicesBg;
+  color: $colorSeviceText;
+
+  .services {
+    width: 1110px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 0;
+
+    .service {
+      display: inline-block;
+      box-sizing: border-box;
+      width: 25%;
+      margin-left: -3px;
+      padding: 0 25px;
+      line-height: 1.4rem;
+      vertical-align: bottom;
+      //outline: 1px solid red;
+
+      &:before {
+        text-align: center;
+        display: block;
+        margin-bottom: 20px;
+        //outline: 1px solid red;
+      }
+    }
+
+   .service-android:before {
+      content: url(../img/android.png);
+    }
+
+    .service-imac:before {
+      content: url(../img/imac.png);
+    }
+
+    .service-camera:before {
+      content: url(../img/camera.png);
+    }
+
+    .service-watch:before {
+      content: url(../img/watch.png);
+    }
+  }
+}
+
+.wrapper-portfolio{
+  width: 100%;
+  color: $colorSeviceText;
+
+  .portfolio {
+    width: 1110px;
+    margin: 60px auto;
+    text-align: center;
+
+    .buttons {
+      margin-bottom: 60px;
+    }
+
+    .works {
+
+      .work {
+        float: left;
+        box-sizing: border-box;
+        width: 25%;
+        height: 150px;
+        padding: 5px;
+        //outline: 2px solid red;
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          opacity: 0.8;
+          transition: 0.5s;
+          cursor: pointer;
+          //outline: 1px solid red;
+
+          &:hover {
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+}
+
+.wrapper-footer {
+  width: 100%;
+  color: $colorNavText;
+
+  .footer {
+    width: 1110px;
+    margin: 0 auto;
+    text-align: center;
+    //outline: 2px dashed green;
+
+    .contacts {
+      padding: 60px 0;
+      background: $colorHeaderBg;
+
+      h5 {
+        font-weight: normal;
+      }
+
+      .phone {
+        padding-left: 40px;
+
+        &:before {
+          padding-right: 10px;
+          content: url(../img/icons/phone.png);
+        }
+      }
+
+      .address:before {
+        padding-right: 10px;
+        content: url(../img/icons/address.png);
+      }
+
+      .social-buttons {
+        img {
+          margin: 0 2px;
+        }
+      }
+
+    }
+
+    .copyright {
+      padding: 30px 0;
+      background: $colorNavBg;
+    }
+  }
+}
+
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}

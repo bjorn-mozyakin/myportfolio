@@ -93,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 li {
   margin: 6px 0;
-  list-style-image: url(/img/icon-tick.png);
+  list-style-image: url(/img/icons/icon-tick.png);
   //outline: 1px solid lime;
 }
 
@@ -300,8 +300,15 @@ li {
     box-sizing: border-box;
     float: left;
     width: 50%;
-    padding: 20px;
+    padding-right: 40px;
    //outline: 1px solid red;
+  }
+
+  .additional-skills {
+    box-sizing: border-box;
+    float: right;
+    width: 50%;
+    padding-left: 40px;
   }
 
   .line-through {
@@ -314,47 +321,53 @@ li {
   }
 }
 
-  .form {
-    box-sizing: border-box;
-    float: left;
-    width: 50%;
-    padding: 0 20px;
-    //outline: 1px solid red;
+.form {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding-right: 40px;
+  //outline: 1px solid red;
 
-    label {
-      display: block;
-      margin: 10px 0 5px 0;
-      //outline: 1px dotted green;
-    }
-
-    input {
-      box-sizing: border-box;
-      display: block;
-      width: 75%;
-      height: 30px;
-      border-radius: 5px;
-
-      &[type="area"] {
-        height: 100px;
-      }
-
-      &[type="submit"] {
-        box-sizing: border-box;
-        height: 50px;
-        margin-top: 20px;
-        border: 2px solid $purpleDark;
-        font-weight: bold;
-        color: $purpleDark;
-        background: linear-gradient(to bottom, $colorGold, $colorDarkGold);
-      }
-    }
+  label {
+    display: block;
+    margin: 10px 0 5px 0;
+    //outline: 1px dotted green;
   }
+
+  input {
+    box-sizing: border-box;
+    display: block;
+    width: 75%;
+    height: 30px;
+    border-radius: 5px;
+    color: #000;
+
+    &[type="area"] {
+      height: 100px;
+    }
+
+    &[type="submit"] {
+      box-sizing: border-box;
+      height: 50px;
+      margin-top: 20px;
+      border: 2px solid $purpleDark;
+      font-weight: bold;
+      color: $purpleDark;
+      background: linear-gradient(to bottom, $colorGold, $colorDarkGold);
+
+      &:hover {
+      background: linear-gradient(to bottom,  rgb(223, 223, 0), $colorGold);
+      }
+    }
+
+  }
+}
 
 .other-contacts {
     box-sizing: border-box;
     float: left;
     width: 50%;
-    padding: 0 20px;
+    padding-left:40px;
     margin-bottom: 16px;
 
     .contact {
@@ -379,19 +392,19 @@ li {
     }
 
     .email {
-      background:url('http://portfolio-rakov.ru/img/icon-email.png') no-repeat;
+      background:url(/img/icons/icon-email.png) no-repeat;
     }
 
     .skype {
-      background:url('http://portfolio-rakov.ru/img/icon-skype.png') no-repeat;
+      background:url(/img/icons/icon-skype.png) no-repeat;
     }
 
     .icq {
-      background:url('http://portfolio-rakov.ru/img/icon-icq.png') no-repeat;
+      background:url(/img/icons/icon-icq.png) no-repeat;
     }
 
     .hh {
-      background:url('http://portfolio-rakov.ru/img/icon-hh.png') no-repeat;
+      background:url(/img/icons/icon-hh.png) no-repeat;
     }
 
 }

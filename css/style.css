@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
 
 li {
   margin: 6px 0;
-  list-style-image: url(/img/icon-tick.png); }
+  list-style-image: url(/img/icons/icon-tick.png); }
 
 .title {
   text-align: center; }
@@ -169,7 +169,12 @@ li {
   box-sizing: border-box;
   float: left;
   width: 50%;
-  padding: 20px; }
+  padding-right: 40px; }
+.skills .additional-skills {
+  box-sizing: border-box;
+  float: right;
+  width: 50%;
+  padding-left: 40px; }
 .skills .line-through {
   text-decoration: line-through; }
 .skills .cv {
@@ -180,7 +185,7 @@ li {
   box-sizing: border-box;
   float: left;
   width: 50%;
-  padding: 0 20px; }
+  padding-right: 40px; }
   .form label {
     display: block;
     margin: 10px 0 5px 0; }
@@ -189,7 +194,8 @@ li {
     display: block;
     width: 75%;
     height: 30px;
-    border-radius: 5px; }
+    border-radius: 5px;
+    color: #000; }
     .form input[type="area"] {
       height: 100px; }
     .form input[type="submit"] {
@@ -200,12 +206,14 @@ li {
       font-weight: bold;
       color: #260338;
       background: linear-gradient(to bottom, #ebc402, #ba9d0b); }
+      .form input[type="submit"]:hover {
+        background: linear-gradient(to bottom, #dfdf00, #ebc402); }
 
 .other-contacts {
   box-sizing: border-box;
   float: left;
   width: 50%;
-  padding: 0 20px;
+  padding-left: 40px;
   margin-bottom: 16px; }
   .other-contacts .contact {
     line-height: 40px;
@@ -219,13 +227,13 @@ li {
     width: 25px;
     margin-right: 10px; }
   .other-contacts .email {
-    background: url("http://portfolio-rakov.ru/img/icon-email.png") no-repeat; }
+    background: url(/img/icons/icon-email.png) no-repeat; }
   .other-contacts .skype {
-    background: url("http://portfolio-rakov.ru/img/icon-skype.png") no-repeat; }
+    background: url(/img/icons/icon-skype.png) no-repeat; }
   .other-contacts .icq {
-    background: url("http://portfolio-rakov.ru/img/icon-icq.png") no-repeat; }
+    background: url(/img/icons/icon-icq.png) no-repeat; }
   .other-contacts .hh {
-    background: url("http://portfolio-rakov.ru/img/icon-hh.png") no-repeat; }
+    background: url(/img/icons/icon-hh.png) no-repeat; }
 
 #acdc audio {
   width: 100%; }
