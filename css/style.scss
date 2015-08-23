@@ -151,7 +151,7 @@ li {
   width: 960px;
   margin: 0 auto;
   padding: 50px 0;
-  //outline: 10px dashed green;
+  //outline: 4px dashed green;
 }
 
 #nav {
@@ -197,7 +197,7 @@ li {
         color: $purpleDark;
       }
 
-      &:active {
+      &.active {
         background: #fff;
         color: $purpleDark;
       }

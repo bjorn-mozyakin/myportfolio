@@ -6,7 +6,7 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-
+  <script src="js/scripts.js"></script>
 </head>
 <body>
   <div id="main-wrapper">
@@ -16,7 +16,7 @@
           <h2><a href="/">Crablog.ru</a></h2>
         </div>
         <ul class="main-menu">
-          <li><a href="#portfolio">Портфолио</a></li>
+          <li><a href="#portfolio" class="active">Портфолио</a></li>
           <li><a href="#about">Обо мне</a></li>
           <li><a href="#contacts">Контакты</a></li>
         </ul>
@@ -26,7 +26,7 @@
     <div id="wrapper-portfolio">
       <section id = "portfolio">
         <header class="title">
-          <h1>Портфолио</h1>
+          <h1 data-item="portfolio" class="menu-item">Портфолио</h1>
         </header>
         <div class="works clearfix">
           <div class="work">
@@ -160,7 +160,7 @@
     <div id="wrapper-about">
       <section id="about" class="skills clearfix">
         <header class="title">
-          <h1>Раков Дмитрий</h1>
+          <h1 class="menu-item" data-item="about">Раков Дмитрий</h1>
           <h2>HTML-верстальщик / Frontend-разработчик</h2>
         </header>
         <div class="skills">
@@ -207,7 +207,7 @@
     <div id="wrapper-contacts">
       <section id="contacts" class="clearfix">
         <header class="title">
-          <h1>Контактная информация</h1>
+          <h1 class="menu-item" data-item="contacts">Контактная информация</h1>
         </header>
         <div class="form">
           <h2>Напишите мне сюда</h2>

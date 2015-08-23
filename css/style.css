@@ -126,7 +126,7 @@ li {
       .main-menu li a:hover {
         background: #fff;
         color: #260338; }
-      .main-menu li a:active {
+      .main-menu li a.active {
         background: #fff;
         color: #260338; }
 
