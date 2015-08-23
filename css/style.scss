@@ -112,7 +112,8 @@ li {
 #wrapper-contacts,
 #wrapper-acdc {
   width: 100%;
-  background-image: linear-gradient(to bottom, $purpleDark, $purpleLight);
+  background: $purpleDark;
+  background: linear-gradient(to bottom, $purpleDark, $purpleLight);
   //outline: 6px dotted maroon;
 }
 
@@ -353,10 +354,12 @@ li {
       border: 2px solid $purpleDark;
       font-weight: bold;
       color: $purpleDark;
+      background: $colorDarkGold;
       background: linear-gradient(to bottom, $colorGold, $colorDarkGold);
 
       &:hover {
-      background: linear-gradient(to bottom,  rgb(223, 223, 0), $colorGold);
+        background: $colorGold;
+        background: linear-gradient(to bottom,  rgb(223, 223, 0), $colorGold);
       }
     }
 

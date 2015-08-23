@@ -67,7 +67,8 @@ li {
 #wrapper-contacts,
 #wrapper-acdc {
   width: 100%;
-  background-image: linear-gradient(to bottom, #260338, #3D1154); }
+  background: #260338;
+  background: linear-gradient(to bottom, #260338, #3D1154); }
 
 #border {
   width: 100%;
@@ -205,8 +206,10 @@ li {
       border: 2px solid #260338;
       font-weight: bold;
       color: #260338;
+      background: #ba9d0b;
       background: linear-gradient(to bottom, #ebc402, #ba9d0b); }
       .form input[type="submit"]:hover {
+        background: #ebc402;
         background: linear-gradient(to bottom, #dfdf00, #ebc402); }
 
 .other-contacts {
