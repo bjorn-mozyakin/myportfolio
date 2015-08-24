@@ -68,10 +68,10 @@ function handler() {
   function Form(options) {
     this.elem = options.elem;
 
-    this.elem.onclick = this.onclick.bind(this);
+    this.elem.onsubmit = this.onsubmit.bind(this);
   }
 
-  Form.prototype.onclick = function(e) {
+  Form.prototype.onsubmit = function(e) {
     this.sendForm(e);
   }
 
@@ -79,16 +79,19 @@ function handler() {
     e = e || window.event;
     var target = e.target || e.srcElement; //for IE8
 
-    if (target.getAttribute('name') == 'submit') {
+    e.preventDefault(); //STOP default action
+
+    if (target.getAttribute('name') == 'send-email') {
       var formName = document.querySelector('.send-email').getAttribute('name');
 
-      $.ajax(
+    $.ajax(
       {
-        url : $(this).attr("action"),
+        url: $('.send-email').attr("action"),
         type: "POST",
-        data : $(this).serialize() + "&submit=" + formName,
-        success:function(data, textStatus, jqXHR)
+        data: $('.send-email').serialize() + "&submit=" + formName,
+        success: function(data, textStatus, jqXHR)
           {
+            $('.send-email').find('input[type=text], input[type=email], textarea').val('');
             showMsgAfterSending('Спасибо, ваше письмо отправлено');
           },
         error: function(jqXHR, textStatus, errorThrown)
@@ -100,8 +103,7 @@ function handler() {
   }
 
   function showMsgAfterSending (message) {
-    var str = '<p>' + message + '</p>';
-    document.querySelector('.send-email').insertAdjacentHTML('beforeEnd', str);
+    document.querySelector('.after-sending').innerHTML = message;
   }
 
   var menu = new Menu({

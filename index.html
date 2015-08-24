@@ -219,15 +219,16 @@
         </header>
         <div class="form">
           <h2>Написать письмо</h2>
-          <form class="send-email" name="send-email" method="post" action="post.php" autocomplete="on">
+          <form class="send-email" name="send-email" method="post" action="http://crablog.ru/post.php">
             <label for="name">Имя</label>
             <input id="name" name="name" type="text" placeholder="Например: Олег Петров">
-            <label for="contact">Контактный e-mail</label>
-            <input id="contact" name="email" type="email" placeholder="Например: petrov@mail.ru">
+            <label for="email">Контактный e-mail</label>
+            <input id="email" name="email" type="email" placeholder="Например: petrov@mail.ru">
             <label for="message">Сообщение</label>
             <textarea id="message" name="message" rows="5"></textarea>
             <input type="submit" name="submit">
           </form>
+          <p class="after-sending"></p>
         </div>
         <div class="other-contacts">
           <h2>Другие способы связи</h2>
