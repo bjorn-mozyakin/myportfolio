@@ -92,7 +92,7 @@ li {
 #contacts,
 #acdc {
   position: relative;
-  width: 95%;
+  width: 90%;
   max-width: 960px;
   margin: 0 auto;
   padding: 60px 0 30px; }
@@ -122,6 +122,7 @@ li {
       padding: 0px 10px;
       margin-left: 3px;
       line-height: 50px;
+      font-size: 16px;
       font-size: 1rem;
       font-weight: bold;
       color: #fff;
@@ -180,23 +181,23 @@ li {
   .works .work .work__description {
     clear: both; }
 
-.skills .title {
+.about .title {
   border: 1px solid #260338;
   text-align: center; }
-.skills .main-skills,
-.skills .additional-skills {
+.about .main-skills,
+.about .additional-skills {
   box-sizing: border-box;
   float: left;
   width: 50%;
   padding-right: 40px; }
-.skills .additional-skills {
+.about .additional-skills {
   box-sizing: border-box;
   float: right;
   width: 50%;
   padding-left: 40px; }
-.skills .line-through {
+.about .line-through {
   text-decoration: line-through; }
-.skills .cv {
+.about .cv {
   clear: both;
   text-align: center; }
 
@@ -208,15 +209,15 @@ li {
   .form label {
     display: block;
     margin: 10px 0 5px 0; }
-  .form input {
+  .form input,
+  .form textarea {
     box-sizing: border-box;
     display: block;
     width: 100%;
-    height: 30px;
     border-radius: 5px;
     color: #000; }
-    .form input[type="area"] {
-      height: 100px; }
+  .form input {
+    height: 30px; }
     .form input[type="submit"] {
       box-sizing: border-box;
       height: 50px;
@@ -229,6 +230,8 @@ li {
       .form input[type="submit"]:hover {
         background: #ebc402;
         background: linear-gradient(to bottom, #dfdf00, #ebc402); }
+  .form textarea[name="message"] {
+    resize: none; }
 
 .other-contacts {
   box-sizing: border-box;
@@ -264,7 +267,7 @@ li {
   display: block;
   clear: both; }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 880px) {
   .works .work .work__main-info .work__main-info_img {
     float: none;
     width: 100%;
@@ -272,18 +275,23 @@ li {
     margin-bottom: 15px; }
   .works .work .work__main-info .work__main-info_name h2, .works .work .work__main-info .work__main-info_name h4 {
     text-align: center; } }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 780px) {
   .main-menu li a {
     font-size: 0; }
     .main-menu li a .icon {
       padding: 0; } }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 720px) {
   .works .work {
     float: none;
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 60px; }
+    .works .work:nth-child(2n+1) {
+      padding-right: 0; }
+    .works .work:nth-child(2n) {
+      padding-left: 0; }
 
-  .skills .main-skills,
-  .skills .additional-skills {
+  .about .main-skills,
+  .about .additional-skills {
     float: none;
     width: 100%;
     padding: 0; }
@@ -299,5 +307,16 @@ li {
 
   .other-contacts {
     margin-top: 30px; } }
+@media screen and (max-width: 420px) {
+  .main-menu li a,
+  .main-menu li a:hover,
+  .main-menu li a.active {
+    padding: 0px 5px; }
+    .main-menu li a .icon,
+    .main-menu li a:hover .icon,
+    .main-menu li a.active .icon {
+      width: 24px;
+      height: 18px;
+      background-size: 100% 100%; } }
 
 /*# sourceMappingURL=style.css.map */

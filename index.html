@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Портфолио Ракова Дмитрия</title>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
    <!-- Imitation media quieries для IE9- -->
   <!--[if lte IE 9]>
   <script src="http://elsystems.ru/templates/zrak_simple/javascript/html5shiv.js"></script>
+  <script src="http://elsystems.ru/templates/zrak_simple/javascript/respond.min.js"></script>
   <script src="//cdn.polyfill.io/v1/polyfill.min.js"></script>
   <![endif]-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
   <script src="js/scripts.js"></script>
 </head>
@@ -31,16 +32,16 @@
     </div>
 
     <div id="wrapper-portfolio">
-      <section id = "portfolio">
+      <section id="portfolio">
         <header class="title">
-          <h1 data-item="portfolio" class="menu-item">Портфолио</h1>
+          <h1 class="menu-item" data-item="portfolio">Портфолио</h1>
         </header>
         <div class="works clearfix">
           <div class="work">
             <div class="work__main-info clearfix">
               <div class="work__main-info_img">
-                <a target="_blank" href="http://elsystems.ru">
-                  <img src="img/portfolio/elsystems.ru-200.jpg" alt="" title="Открыть сайт в новом окне">
+                <a target="_blank" href="http://elsystems.ru" title="Открыть сайт в новом окне">
+                  <img src="img/portfolio/elsystems.ru-200.jpg" alt="">
                 </a>
               </div>
               <div class="work__main-info_name">
@@ -60,8 +61,8 @@
           <div class="work">
             <div class="work__main-info clearfix">
               <div class="work__main-info_img">
-                <a target="_blank" href="http://forsld.ru">
-                  <img src="img/portfolio/forsltd.ru-200.jpg" alt="" title="Открыть сайт в новом окне">
+                <a target="_blank" href="http://forsld.ru" title="Открыть сайт в новом окне">
+                  <img src="img/portfolio/forsltd.ru-200.jpg" alt="">
                 </a>
               </div>
               <div class="work__main-info_name">
@@ -82,8 +83,8 @@
           <div class="work">
             <div class="work__main-info clearfix">
               <div class="work__main-info_img">
-                <a target="_blank" href="http://elsystems.ru">
-                  <img src="img/portfolio/bellydance-samara.ru-200.jpg" alt="" title="Открыть сайт в новом окне">
+                <a target="_blank" href="http://bellydance-samara.ru" title="Открыть сайт в новом окне">
+                  <img src="img/portfolio/bellydance-samara.ru-200.jpg" alt="">
                 </a>
               </div>
               <div class="work__main-info_name">
@@ -103,8 +104,8 @@
           <div class="work">
             <div class="work__main-info clearfix">
               <div class="work__main-info_img">
-                <a target="_blank" href="http://tamdaleko.ru">
-                  <img src="img/portfolio/tamdaleko.ru-200.jpg" alt="" title="Открыть сайт в новом окне">
+                <a target="_blank" href="http://tamdaleko.ru" title="Открыть сайт в новом окне">
+                  <img src="img/portfolio/tamdaleko.ru-200.jpg" alt="">
                 </a>
               </div>
               <div class="work__main-info_name">
@@ -125,8 +126,8 @@
           <div class="work">
             <div class="work__main-info clearfix">
               <div class="work__main-info_img">
-                <a target="_blank" href="http://elsystems.ru">
-                  <img src="img/portfolio/layout1-200.jpg" alt="" title="Открыть шаблон в новом окне">
+                <a target="_blank" href="/portfolio/layout1/index.html" title="Открыть шаблон в новом окне">
+                  <img src="img/portfolio/layout1-200.jpg" alt="">
                 </a>
               </div>
               <div class="work__main-info_name">
@@ -143,8 +144,8 @@
           <div class="work">
             <div class="work__main-info clearfix">
               <div class="work__main-info_img">
-                <a target="_blank" href="http://elsystems.ru">
-                  <img src="img/portfolio/layout2-200.jpg" alt="" title="Открыть шаблон в новом окне">
+                <a target="_blank" href="/portfolio/layout2-BisLite/index.html" title="Открыть шаблон в новом окне">
+                  <img src="img/portfolio/layout2-200.jpg" alt="">
                 </a>
               </div>
               <div class="work__main-info_name">
@@ -165,7 +166,7 @@
     <div id="border"></div>
 
     <div id="wrapper-about">
-      <section id="about" class="skills clearfix">
+      <section id="about" class="about clearfix">
         <header class="title">
           <h1 class="menu-item" data-item="about">Раков Дмитрий</h1>
           <h2>HTML-верстальщик / Frontend-разработчик</h2>
@@ -204,7 +205,7 @@
           </ul>
         </div>
         <div class="cv">
-          <p>Полное резюме можно <a target="_blank" href="http://hh.ru/resume/f9eecb22ff029de4100039ed1f4963424f7235" target="_blank" title="Посмотреть профиль">посмотреть на HeadHunter</a></p>
+          <p>Полное резюме можно <a target="_blank" href="http://hh.ru/resume/f9eecb22ff029de4100039ed1f4963424f7235" target="_blank" title="Посмотреть профиль">посмотреть на сайте HeadHunter</a></p>
         </div>
       </section>
     </div>
@@ -218,14 +219,14 @@
         </header>
         <div class="form">
           <h2>Написать письмо</h2>
-          <form action="">
+          <form class="send-email" name="send-email" method="post" action="post.php" autocomplete="on">
             <label for="name">Имя</label>
-            <input id = "name" type="text" placeholder="Например: Олег Петров">
+            <input id="name" name="name" type="text" placeholder="Например: Олег Петров">
             <label for="contact">Контактный e-mail</label>
-            <input id="contact" type="text" placeholder="Например: petrov@mail.ru">
+            <input id="contact" name="email" type="email" placeholder="Например: petrov@mail.ru">
             <label for="message">Сообщение</label>
-            <input id="message" type="area">
-            <input type="submit">
+            <textarea id="message" name="message" rows="5"></textarea>
+            <input type="submit" name="submit">
           </form>
         </div>
         <div class="other-contacts">
@@ -252,14 +253,6 @@
           <a href="audio/ACDC - Highway To Hell.mp3" target="_blank">ACDC - Highway To Hell.mp3</a>.
           </p>
         </audio>
-
-<!--         <audio id="player" src="audio/ACDC - Back In Blcak.mp3"></audio>
-        <div>
-            <button onclick="document.getElementById('player').play()">Воспроизведение</button>
-            <button onclick="document.getElementById('player').pause()">Пауза</button>
-            <button onclick="document.getElementById('player').volume+=0.1">Громкость +</button>
-            <button onclick="document.getElementById('player').volume-=0.1">Громкость -</button>
-        </div> -->
       </section>
     </div>
   </div>
