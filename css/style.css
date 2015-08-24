@@ -86,18 +86,16 @@ li {
   z-index: 5;
   border-bottom: 2px solid gray; }
 
-#wrapper-portfolio {
-  padding-top: 50px; }
-
 #nav,
 #portfolio,
 #about,
 #contacts,
 #acdc {
   position: relative;
-  width: 960px;
+  width: 95%;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 50px 0; }
+  padding: 60px 0 30px; }
 
 #nav {
   padding: 0; }
@@ -112,7 +110,8 @@ li {
   padding: 0;
   height: 50px;
   width: 100%;
-  text-align: right; }
+  text-align: right;
+  font-size: 0; }
   .main-menu li {
     margin: 0;
     padding: 0;
@@ -120,16 +119,35 @@ li {
     .main-menu li a {
       display: block;
       text-transform: uppercase;
-      padding: 0px 20px;
+      padding: 0px 10px;
+      margin-left: 3px;
       line-height: 50px;
+      font-size: 1rem;
       font-weight: bold;
-      color: #fff; }
-      .main-menu li a:hover {
+      color: #fff;
+      vertical-align: middle; }
+      .main-menu li a .icon {
+        display: inline-block;
+        vertical-align: middle;
+        width: 40px;
+        height: 30px;
+        margin-top: -5px;
+        padding-right: 10px; }
+      .main-menu li a .icon-portfolio {
+        background: url(/img/icons/portfolio.png) no-repeat; }
+      .main-menu li a .icon-about {
+        background: url(/img/icons/about.png) no-repeat; }
+      .main-menu li a .icon-contacts {
+        background: url(/img/icons/contacts.png) no-repeat; }
+      .main-menu li a:hover, .main-menu li a.active {
         background: #fff;
         color: #260338; }
-      .main-menu li a.active {
-        background: #fff;
-        color: #260338; }
+        .main-menu li a:hover .icon-portfolio, .main-menu li a.active .icon-portfolio {
+          background: url(/img/icons/portfolio-hover.png) no-repeat; }
+        .main-menu li a:hover .icon-about, .main-menu li a.active .icon-about {
+          background: url(/img/icons/about-hover.png) no-repeat; }
+        .main-menu li a:hover .icon-contacts, .main-menu li a.active .icon-contacts {
+          background: url(/img/icons/contacts-hover.png) no-repeat; }
 
 .works .work {
   float: left;
@@ -165,7 +183,7 @@ li {
 .skills .title {
   border: 1px solid #260338;
   text-align: center; }
-.skills .skills,
+.skills .main-skills,
 .skills .additional-skills {
   box-sizing: border-box;
   float: left;
@@ -193,7 +211,7 @@ li {
   .form input {
     box-sizing: border-box;
     display: block;
-    width: 75%;
+    width: 100%;
     height: 30px;
     border-radius: 5px;
     color: #000; }
@@ -216,7 +234,7 @@ li {
   box-sizing: border-box;
   float: left;
   width: 50%;
-  padding-left: 40px;
+  padding-left: 100px;
   margin-bottom: 16px; }
   .other-contacts .contact {
     line-height: 40px;
@@ -245,5 +263,41 @@ li {
   content: '';
   display: block;
   clear: both; }
+
+@media screen and (max-width: 840px) {
+  .works .work .work__main-info .work__main-info_img {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px; }
+  .works .work .work__main-info .work__main-info_name h2, .works .work .work__main-info .work__main-info_name h4 {
+    text-align: center; } }
+@media screen and (max-width: 720px) {
+  .main-menu li a {
+    font-size: 0; }
+    .main-menu li a .icon {
+      padding: 0; } }
+@media screen and (max-width: 680px) {
+  .works .work {
+    float: none;
+    width: 100%; }
+
+  .skills .main-skills,
+  .skills .additional-skills {
+    float: none;
+    width: 100%;
+    padding: 0; }
+
+  .form,
+  .other-contacts {
+    float: none;
+    width: 100%;
+    padding: 0; }
+    .form h2,
+    .other-contacts h2 {
+      text-align: center; }
+
+  .other-contacts {
+    margin-top: 30px; } }
 
 /*# sourceMappingURL=style.css.map */

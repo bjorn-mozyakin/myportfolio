@@ -7,6 +7,8 @@ $colorGold: #ebc402;
 $colorDarkGold: #ba9d0b;
 $colorWhite: #fff;
 
+$screenWidth: 960px;
+
 /* font-family: "LatoRegular"; */
 @font-face {
     font-family: "Lato";
@@ -91,6 +93,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   padding-top: 0;
 }
+
 li {
   margin: 6px 0;
   list-style-image: url(/img/icons/icon-tick.png);
@@ -139,19 +142,16 @@ li {
   //outline: 3px solid green;
 }
 
-#wrapper-portfolio {
-  padding-top: 50px;
-}
-
 #nav,
 #portfolio,
 #about,
 #contacts,
 #acdc {
   position: relative;
-  width: 960px;
+  width: 95%;
+  max-width: $screenWidth;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 60px 0 30px;
   //outline: 4px dashed green;
 }
 
@@ -164,6 +164,7 @@ li {
   text-transform: uppercase;
   line-height: 50px;
 }
+
 .main-menu {
   //position: fixed;
   // left: 0;
@@ -175,6 +176,7 @@ li {
   width: 100%;
   //line-height: 30px;
   text-align: right;
+  font-size: 0;
   //outline: 1px solid red;
   //background: #000;
   //z-index: 5;
@@ -183,24 +185,61 @@ li {
     margin: 0;
     padding: 0;
     display: inline-block;
+      //outline: 1px solid red;
 
     a {
       display: block;
+      //vertical-align: middle;
       text-transform: uppercase;
-      padding: 0px 20px;
+      padding: 0px 10px;
+      margin-left: 3px;
       line-height: 50px;
+      font-size: 1rem;
       font-weight: bold;
       color: $colorWhite;
+      vertical-align: middle;
       //outline: 1px solid green;
 
-      &:hover {
-        background: #fff;
-        color: $purpleDark;
+      .icon {
+        display: inline-block;
+        vertical-align: middle;
+        width: 40px;
+        height: 30px;
+        //line-height: 50px;
+        margin-top: -5px;
+        padding-right: 10px;
+        //background-size: 100% 100%;
+        //outline: 1px solid blue;
       }
 
+      .icon-portfolio {
+        background: url(/img/icons/portfolio.png) no-repeat;
+      }
+
+      .icon-about {
+        background: url(/img/icons/about.png) no-repeat;
+      }
+
+      .icon-contacts {
+        background: url(/img/icons/contacts.png) no-repeat;
+      }
+
+      &:hover,
       &.active {
         background: #fff;
         color: $purpleDark;
+
+        .icon-portfolio {
+          background: url(/img/icons/portfolio-hover.png) no-repeat;
+        }
+
+        .icon-about {
+          background: url(/img/icons/about-hover.png) no-repeat;
+        }
+
+        .icon-contacts {
+          background: url(/img/icons/contacts-hover.png) no-repeat;
+        }
       }
 
     }
@@ -296,7 +335,7 @@ li {
     text-align: center;
   }
 
-  .skills,
+  .main-skills,
   .additional-skills {
     box-sizing: border-box;
     float: left;
@@ -338,7 +377,7 @@ li {
   input {
     box-sizing: border-box;
     display: block;
-    width: 75%;
+    width: 100%;
     height: 30px;
     border-radius: 5px;
     color: #000;
@@ -370,7 +409,7 @@ li {
     box-sizing: border-box;
     float: left;
     width: 50%;
-    padding-left:40px;
+    padding-left:100px;
     margin-bottom: 16px;
 
     .contact {
@@ -425,4 +464,74 @@ li {
   content: '';
   display: block;
   clear: both;
+}
+
+@media screen and (max-width: 840px) {
+  .works{
+    .work {
+      .work__main-info {
+        .work__main-info_img {
+          float: none;
+          width: 100%;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+
+        .work__main-info_name {
+          h2, h4 {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 720px) {
+  .main-menu li a {
+    font-size: 0;
+
+    .icon {
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .works{
+    .work {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  .skills {
+    .main-skills,
+    .additional-skills {
+      float: none;
+      width: 100%;
+      padding: 0;
+     //outline: 1px solid red;
+    }
+  }
+
+  .form,
+  .other-contacts {
+    float: none;
+    width: 100%;
+    padding: 0;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .other-contacts {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+
 }
