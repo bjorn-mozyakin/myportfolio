@@ -141,34 +141,39 @@ a {
   width: 1000px;
   margin: 0 auto;
   padding: 30px 0; }
-  .content .latest-works h2:before {
-    content: url(../img/icons/latest-works.png);
-    display: inline-block;
-    vertical-align: middle;
-    padding-right: 8px; }
+  .content .latest-works h2 {
+    margin-bottom: 10px; }
+    .content .latest-works h2:before {
+      content: url(../img/icons/latest-works.png);
+      display: inline-block;
+      vertical-align: middle;
+      padding-right: 8px; }
   .content .latest-works .arrows {
     float: right; }
-    .content .latest-works .arrows .arrow-left {
+    .content .latest-works .arrows .arrow-left, .content .latest-works .arrows .arrow-right {
       display: inline-block;
       width: 20px;
       height: 20px;
-      background: url(../img/icons/arrow-left.png); }
+      cursor: pointer;
+      background: url(../img/icons/arrow-left.png);
+      border-radius: 20px; }
+      .content .latest-works .arrows .arrow-left:hover, .content .latest-works .arrows .arrow-right:hover {
+        opacity: 0.7; }
+      .content .latest-works .arrows .arrow-left:active, .content .latest-works .arrows .arrow-right:active {
+        box-shadow: 0 0 8px #E9E903; }
     .content .latest-works .arrows .arrow-right {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
       background: url(../img/icons/arrow-right.png); }
   .content .latest-works .works-preview {
     width: 100%;
     display: inline-block;
-    outline: 1px solid green;
     white-space: nowrap;
-    overflow: hidden; }
-    .content .latest-works .works-preview img {
-      width: 200px;
-      margin-right: 62px;
-      display: inline-block;
-      outline: 1px solid red; }
+    overflow: hidden;
+    font-size: 0; }
+    .content .latest-works .works-preview .works-container {
+      transition: 1s; }
+      .content .latest-works .works-preview .works-container img {
+        width: 200px;
+        margin: 0 25px; }
   .content .additional-panel .testimonials {
     float: left;
     box-sizing: border-box;
