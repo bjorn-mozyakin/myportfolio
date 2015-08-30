@@ -14,9 +14,9 @@ function handler() {
     e = e || window.event;
     var target = e.target || e.srcElement;
 
-    if (target.tagName == 'A' && target.closest('.main-menu')) {
-      this.deleteCurrentActiveClass(target);
-      this.setNewActiveClass(target);
+    if (target.tagName == 'A' || target.tagName = 'I') {
+      this._deleteCurrentActiveClass(target);
+      this._setNewActiveClass(target);
     };
   }
 
