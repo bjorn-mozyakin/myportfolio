@@ -249,25 +249,25 @@ li {
 }
 
 .works {
-  //padding-top: 0px;
-  // background-image: linear-gradient($purpleDark, $purpleLight);
-  //  outline: 3px solid green;
+  font-size: 0;
 
   .work {
-    float: left;
-    //box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
     box-sizing: border-box;
     width: 50%;
     margin: 20px 0;
-    //height: 250px;
+    font-size: 16px;
+    font-size: 1rem;
+    text-align: left;
     //outline: 1px solid gray;
 
     &:nth-child(2n+1) {
-      padding-right: 30px;
+      padding-right: 40px;
     }
 
     &:nth-child(2n) {
-      padding-left: 30px;
+      padding-left: 40px;
     }
 
     img {
@@ -301,8 +301,6 @@ li {
       }
 
       .work__main-info_name {
-        //float: right;
-        //outline: 2px dotted yellow;
 
         h2, h4 {
           margin: 0;
@@ -316,9 +314,7 @@ li {
     }
 
     .work__description {
-      clear: both;
       //outline: 2px dashed blue;
-
     }
   }
 }
@@ -471,7 +467,7 @@ li {
   clear: both;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 930px) {
   .works{
     .work {
       .work__main-info {
@@ -506,7 +502,6 @@ li {
 @media screen and (max-width: 720px) {
   .works{
     .work {
-      float: none;
       width: 100%;
       margin-bottom: 60px;
 
