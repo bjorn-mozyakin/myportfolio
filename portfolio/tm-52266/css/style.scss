@@ -1,7 +1,35 @@
 /* VARIABLES */
-
+$max-width: 1200px;
 /* FONTS */
 
 /* COMMON STYLES */
+.wrapper-all {
+  width: 100%;
+}
 
+.wrapper-header,
+.wrapper-main,
+.wrapper-footer {
+  width: 100%;
+  outline: 1px solid red;
+}
+
+.header {
+  width: 100%;
+  outline: 2px dotted blue;
+}
+
+.main {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  outline: 2px dotted green;
+}
+
+.footer {
+  width: 100%;
+  outline: 2px dotted yellow;
+}
+
+.header__nav {}
 /* MEDIA QUIERIES */
