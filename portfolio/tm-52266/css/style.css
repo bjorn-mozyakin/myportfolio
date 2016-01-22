@@ -617,68 +617,90 @@ h5 {
   text-align: center; }
 
 /* Newsletter*/
-.newsletter__description {
+.newsletter__info {
   box-sizing: border-box;
   display: inline-block;
   width: 50%;
-  padding: 80px 30px 0;
+  margin: 80px 0;
+  padding: 0 50px;
+  border-right: 1px solid #EEE;
   vertical-align: top; }
-  .newsletter__description h5 {
-    text-transform: none;
-    text-align: left;
-    margin-bottom: 30px; }
 
-.newsletter__description__sb {
+.newsletter__info__title {
+  text-transform: none;
+  text-align: left;
+  margin-bottom: 30px; }
+
+.newsletter__info__description {
+  font-weight: normal; }
+
+.newsletter__info__sb {
   margin-top: 20px; }
-  .newsletter__description__sb a {
-    position: relative;
-    outline: 1px solid red; }
-    .newsletter__description__sb a:before {
-      content: '';
-      display: inline-block;
-      margin: 0 20px 0 0;
-      font-size: 28px;
-      font-family: FontAwesome;
-      color: #3db4ff;
-      transition: all 0.5s;
-      outline: 1px solid red; }
-      .newsletter__description__sb a:before:hover {
-        color: #fe8301; }
-  .newsletter__description__sb .newsletter__description__sb__google:before {
-    content: '\f0d5'; }
-  .newsletter__description__sb .newsletter__description__sb__tw:before {
-    content: '\f099'; }
-  .newsletter__description__sb .newsletter__description__sb__fb:before {
-    content: '\f09a'; }
-  .newsletter__description__sb .newsletter__description__sb__pinterest:before {
-    content: '\f0d2'; }
-  .newsletter__description__sb .newsletter__description__sb__linkedin:before {
-    content: '\f0e1'; }
+
+.newsletter__info__sb__icon {
+  content: '';
+  display: inline-block;
+  margin: 0 20px 0 0;
+  font-size: 28px;
+  font-family: FontAwesome;
+  color: #3db4ff;
+  transition: all 0.5s; }
+  .newsletter__info__sb__icon:hover {
+    color: #fe8301;
+    -moz-transform: rotateY(360deg);
+    /* ╨Ф╨╗╤П Firefox */
+    -ms-transform: rotateY(360deg);
+    /* ╨Ф╨╗╤П IE */
+    -webkit-transform: rotateY(360deg);
+    /* ╨Ф╨╗╤П Safari, Chrome, iOS */
+    -o-transform: rotateY(360deg);
+    /* ╨Ф╨╗╤П Opera */
+    transform: rotateY(360deg); }
+
+.newsletter__info__sb__google:before {
+  content: '\f0d5';
+  font-family: FontAwesome; }
+
+.newsletter__info__sb__tw:before {
+  content: '\f099'; }
+
+.newsletter__info__sb__fb:before {
+  content: '\f09a'; }
+
+.newsletter__info__sb__pinterest:before {
+  content: '\f0d2'; }
+
+.newsletter__info__sb__linkedin:before {
+  content: '\f0e1'; }
 
 .newsletter__signup {
   box-sizing: border-box;
   display: inline-block;
   width: 50%;
-  padding: 60px 30px 0;
+  margin: 80px 0;
+  padding: 0 50px;
   margin-left: -4px;
   vertical-align: top; }
-  .newsletter__signup h4 {
+  .newsletter__signup .newsletter__signup__title {
     text-align: left;
     margin-bottom: 22px; }
+  .newsletter__signup .newsletter__signup__description {
+    font-weight: normal; }
   .newsletter__signup input {
     box-sizing: border-box;
     height: 40px;
     margin: 0;
     margin-top: 20px;
     padding: 0;
-    padding-left: 10px; }
+    font-weight: normal; }
     .newsletter__signup input[name="email"] {
       width: 300px;
-      margin-right: 30px;
+      margin-right: 20px;
+      padding-left: 10px;
       border: 1px solid #888; }
     .newsletter__signup input[name="submit"] {
       width: 100px;
-      border: 1px solid #fe8301;
+      border: 2px solid #fe8301;
       text-transform: uppercase;
       color: #fe8301;
       background: none;
