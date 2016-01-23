@@ -186,29 +186,86 @@ h5 {
   margin: 0;
   margin-right: 90px;
   padding: 0;
-  list-style-type: none;
-  font-size: 23.8pxpx;
-  font-size: 1.7rem;
-  font-weight: normal; }
+  list-style-type: none; }
 
-.header__nav__menu li {
+.header__nav__menu > li {
   display: inline-block;
   margin-left: -4px;
   margin-left: 32px;
-  text-transform: uppercase; }
-  .header__nav__menu li:first-child {
+  outline: 1px solid yellow; }
+  .header__nav__menu > li:first-child {
     margin-left: none; }
 
-.header__nav__menu li a {
+.header__nav__menu > li > a {
   height: 112px;
   line-height: 112px;
-  transition: color 0.5s; }
+  font-size: 23.8pxpx;
+  font-size: 1.7rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: color 0.5s;
+  outline: 1px dotted red; }
 
-.header__nav__menu li a:hover {
+.header__nav__menu > li > a:hover {
   color: #fff; }
 
-.header__nav__menu li a.active {
+.header__nav__menu > li > a.active {
   color: #fff; }
+
+.header__nav__menu > li.submenu-exists {
+  position: relative; }
+
+.header__nav__menu__submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  list-style-type: none;
+  font-size: 14pxpx;
+  font-size: 1rem;
+  font-weight: normal;
+  background: #292625; }
+
+.header__nav__menu__submenu > li {
+  outline: 1px solid blue; }
+
+.header__nav__menu__submenu > li > a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background: #292625;
+  transition: all 0.5s; }
+
+.header__nav__menu__submenu > li > a:hover {
+  background: #fe8301; }
+
+.subsubmenu-exists {
+  position: relative; }
+
+.header__nav__menu__submenu__submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+.header__nav__menu__submenu__submenu > li > a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background: #292625;
+  transition: all 0.5s;
+  outline: 1px solid maroon; }
+
+.header__nav__menu__submenu__submenu > li > a:hover {
+  background: #fe8301; }
 
 .header__search {
   float: right; }

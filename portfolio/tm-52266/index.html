@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="http://ajax.googjax/libs/jquery/1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
   <!-- Imitation media quieries для IE9- -->
   <!--[if lte IE 9]>
@@ -29,9 +29,30 @@
         <nav class="header__nav">
           <ul class="header__nav__menu">
             <li><a href="" class="active">Home</a></li>
-            <li><a href="">About Us</a></li>
+            <li class="submenu-exists">
+              <a href="">About Us</a>
+              <ul class="submenu header__nav__menu__submenu">
+                <li><a href="/">Testimonials</a></li>
+                <li><a href="/">Archives</a></li>
+                <li><a href="/">FAQs</a></li>
+              </ul>
+            </li>
             <li><a href="">Services</a></li>
-            <li><a href="">Projects</a></li>
+            <li class="submenu-exists">
+              <a href="">Projects</a>
+              <ul class="submenu header__nav__menu__submenu">
+                <li><a href="/">Project 1</a></li>
+                <li class="submenu-exists">
+                  <a href="/">Project 2</a>
+                  <ul class="submenu header__nav__menu__submenu__submenu">
+                    <li><a href="/">Category 1</a></li>
+                    <li><a href="/">Category 2</a></li>
+                    <li><a href="/">Category 2</a></li>
+                  </ul>
+                </li>
+                <li><a href="/">Project 3</a></li>
+              </ul>
+            </li>
             <li><a href="">Contacts</a></li>
             <li><a href="">Blog</a></li>
           </ul>
