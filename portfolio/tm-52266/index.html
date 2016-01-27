@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -24,6 +24,7 @@
           <a href="/"><img src="images/logo.png" alt="Logo Construction Co"></a>
         </div>
         <div class="header__search">
+          <input class="header__search__field" type="text" name="search" placeholder="Поиск">
           <span class="header__search__icon"></span>
         </div>
         <nav class="header__nav">
@@ -41,7 +42,8 @@
             <li class="submenu-exists">
               <a href="">Projects</a>
               <ul class="submenu header__nav__menu__submenu">
-                <li><a href="/">Project 1</a></li>
+                <li>
+                  <a href="/">Project 1</a></li>
                 <li class="submenu-exists">
                   <a href="/">Project 2</a>
                   <ul class="submenu header__nav__menu__submenu__submenu">
@@ -61,24 +63,32 @@
     </div>
     <div class="wrapper-slider">
       <div class="slider">
-        <div class="slider__captions">
-          <div class="slider__captions__caption slider__captions__caption1">
-            <h1>Title1</h1>
-            <p>Lorem</p>
+        <div class="slider__outer">
+          <div class="slider__captions">
+            <div class="slider__captions__caption slider__captions__caption_active slider__captions__caption1" data-capnum="1">
+              <h1 class="slider__captions__caption__title">Welcome!</h1>
+              <p class="slider__captions__caption__text">We are the leaders in the construction industry</p>
+            </div>
+            <div class="slider__captions__caption slider__captions__caption2" data-capnum="2">
+              <h1 class="slider__captions__caption__title">Yes!</h1>
+              <p class="slider__captions__caption__text">We are ready to satisfy your project requirements</p>
+            </div>
+            <div class="slider__captions__caption slider__captions__caption3" data-capnum="3">
+              <h1 class="slider__captions__caption__title">Believe!</h1>
+              <p class="slider__captions__caption__text">We strive to excellence in service we provide</p>
+            </div>
+            <div class="slider__captions__circles">
+              <span class="slider__captions__circles__circle slider__captions__circles__circle_active" data-circlenum="1"></span>
+              <span class="slider__captions__circles__circle" data-circlenum="2"></span>
+              <span class="slider__captions__circles__circle" data-circlenum="3"></span>
+            </div>
           </div>
-          <div class="slider__captions__caption slider__captions__caption2">
-            <h1>Title1</h1>
-            <p>Lorem</p>
+
+          <div class="slider__images">
+            <img data-imgnum = "1" src="images/slide_1_parallax.jpg" class="slider__images__image slider__images__image_active"/>
+            <img data-imgnum = "2" src="images/slide_2_parallax.jpg" class="slider__images__image"/>
+            <img data-imgnum = "3" src="images/slide_3_parallax.jpg" class="slider__images__image"/>
           </div>
-          <div class="slider__captions__caption slider__captions__caption3">
-            <h1>Title1</h1>
-            <p>Lorem</p>
-          </div>
-        </div>
-        <div class="slider__images">
-          <img src="images/slide_1_parallax.jpg" />
-          <img src="images/slide_2_parallax.jpg" />
-          <img src="images/slide_3_parallax.jpg" />
         </div>
       </div>
     </div>
@@ -90,17 +100,17 @@
         </header>
         <ul class="whatwedo__list">
           <li class="whatwedo__list__item">
-            <a href="images/1.jpg" class="whatwedo__list__item__img"><img src="images/img_1-370x315.jpg" alt=""></a>
+            <a href="images/img_1.jpg" class="whatwedo__list__item__img magnify"><img src="images/img_1-370x315.jpg" alt=""></a>
             <h4 class="whatwedo__list__item__title"><a href="">VESTIBULUM IACULIS</a></h4>
             <span>LACINIA / DICTUM</span>
           </li>
           <li class="whatwedo__list__item">
-            <a href="images/1.jpg" class="whatwedo__list__item__img"><img src="images/img_2-370x315.jpg" alt=""></a>
+            <a href="images/img_2.jpg" class="whatwedo__list__item__img magnify"><img src="images/img_2-370x315.jpg" alt=""></a>
             <h4 class="whatwedo__list__item__title"><a href="">LACINIA EST</a></h4>
             <span>LACINIA / DICTUM</span>
           </li>
           <li class="whatwedo__list__item">
-            <a href="images/1.jpg" class="whatwedo__list__item__img"><img src="images/img_3-370x315.jpg" alt=""></a>
+            <a href="images/img_3.jpg" class="whatwedo__list__item__img magnify"><img src="images/img_3-370x315.jpg" alt=""></a>
             <h4 class="whatwedo__list__item__title"><a href="">ELEMENTUM VELIT</a></h4>
             <span>LACINIA / DICTUM</span>
           </li>
@@ -246,32 +256,32 @@
         </header>
         <ul class="ourteam__team">
           <li class="ourteam__team__member">
-            <a href="images/team_1.jpg" class="ourteam__team__member__photo"><img src="images/team_1-151x151.jpg" alt=""></a>
+            <a href="images/team_1.jpg" class="ourteam__team__member__photo magnify"><img src="images/team_1-151x151.jpg" alt=""></a>
             <h5 class="ourteam__team__member__title"><a href="">ADAM SMITH 1</a></h5>
             <div class="ourteam__team__member__description">Nulla facilisi. Aenean...</div>
           </li>
           <li class="ourteam__team__member">
-            <a href="images/team_1.jpg" class="ourteam__team__member__photo"><img src="images/team_2-151x151.jpg" alt=""></a>
+            <a href="images/team_2.jpg" class="ourteam__team__member__photo magnify"><img src="images/team_2-151x151.jpg" alt=""></a>
             <h5 class="ourteam__team__member__title"><a href="">ADAM SMITH 2</a></h5>
             <div class="ourteam__team__member__description">Nulla facilisi. Aenean...</div>
           </li>
           <li class="ourteam__team__member">
-            <a href="images/team_1.jpg" class="ourteam__team__member__photo"><img src="images/team_3-151x151.jpg" alt=""></a>
+            <a href="images/team_3.jpg" class="ourteam__team__member__photo magnify"><img src="images/team_3-151x151.jpg" alt=""></a>
             <h5 class="ourteam__team__member__title"><a href="">ADAM SMITH 3</a></h5>
             <div class="ourteam__team__member__description">Nulla facilisi. Aenean...</div>
           </li>
           <li class="ourteam__team__member">
-            <a href="images/team_1.jpg" class="ourteam__team__member__photo"><img src="images/team_4-151x151.jpg" alt=""></a>
+            <a href="images/team_4.jpg" class="ourteam__team__member__photo magnify"><img src="images/team_4-151x151.jpg" alt=""></a>
             <h5 class="ourteam__team__member__title"><a href="">ADAM SMITH 4</a></h5>
             <div class="ourteam__team__member__description">Nulla facilisi. Aenean...</div>
           </li>
           <li class="ourteam__team__member">
-            <a href="images/team_1.jpg" class="ourteam__team__member__photo"><img src="images/team_5-151x151.jpg" alt=""></a>
+            <a href="images/team_5.jpg" class="ourteam__team__member__photo magnify"><img src="images/team_5-151x151.jpg" alt=""></a>
             <h5 class="ourteam__team__member__title"><a href="">ADAM SMITH 5</a></h5>
             <div class="ourteam__team__member__description">Nulla facilisi. Aenean...</div>
           </li>
           <li class="ourteam__team__member">
-            <a href="images/team_1.jpg" class="ourteam__team__member__photo"><img src="images/team_6-151x151.jpg" alt=""></a>
+            <a href="images/team_6.jpg" class="ourteam__team__member__photo magnify"><img src="images/team_6-151x151.jpg" alt=""></a>
             <h5 class="ourteam__team__member__title"><a href="">ADAM SMITH 6</a></h5>
             <div class="ourteam__team__member__description">Nulla facilisi. Aenean...</div>
           </li>
