@@ -16,7 +16,181 @@
   <script src="http://insales1.ru/js/html5shiv.js"></script>
   <![endif]-->
   <script src="js/scripts-jq.js"></script>
+
+  <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script src="js/scripts-googlemap.js"></script>
+<!--
+  <script>
+    var companyPos = new google.maps.LatLng(34.426218,-119.709105);
+    var map;
+
+    function CenterControl(controlDiv, map) {
+      var controlUI = document.createElement('div');
+
+      $(controlUI)
+        .attr('title', 'Click to recenter the map')
+        .css({
+          'color': 'rgb(25,25,25)',
+          'font-family': 'Roboto,Arial,sans-serif',
+          'fontSize': '12px',
+          'height': '35px',
+          'line-height': '35px',
+          'padding-left': '25px',
+          'padding-right': '25px',
+          'background-color': '#fff',
+          'border-radius': '3px',
+          'box-shadow': '0 2px 6px rgba(0,0,0,.3)',
+          'cursor': 'pointer',
+          'margin-top': '10px',
+          'text-align': 'center'
+        })
+        .hover(function(){
+            $(this).css("background-color", "#E5E5E5");
+          }, function(){
+            $(this).css("background-color", "#fff");
+          })
+        .html('Центрировать карту');
+
+      $(controlDiv).append(controlUI);
+
+      // Setup the click event listeners: simply set the map to Chicago.
+      controlUI.addEventListener('click', function() {
+        map.setCenter(companyPos);
+      });
+    }
+
+    function ColorControl(controlDiv, map) {
+
+      var controlUI = document.createElement('div');
+
+      $(controlUI)
+        .attr('title', 'Click to discolor the map')
+        .css({
+          'color': 'rgb(25,25,25)',
+          'font-family': 'Roboto,Arial,sans-serif',
+          'fontSize': '12px',
+          'height': '35px',
+          'line-height': '35px',
+          'padding-left': '25px',
+          'padding-right': '25px',
+          'background-color': '#fff',
+          'border-radius': '3px',
+          'box-shadow': '0 2px 6px rgba(0,0,0,.3)',
+          'cursor': 'pointer',
+          'margin-top': '10px',
+          'text-align': 'center'
+        })
+        .hover(function(){
+            $(this).css("background-color", "#E5E5E5");
+          }, function(){
+            $(this).css("background-color", "#fff");
+          })
+        .html('Обесцветить карту');
+
+      // Setup the click event listeners: simply set the map to Chicago.
+      controlUI.addEventListener('click', function() {
+        var mapStyles = [
+          {
+            "stylers": [
+              { "saturation": -100 }
+            ]
+          },{
+          }
+        ]
+
+        var styledMapOptions = {};
+
+        var blackWhiteMapType = new google.maps.StyledMapType(
+            mapStyles, styledMapOptions);
+
+        map.mapTypes.set('blackwhitemap', blackWhiteMapType);
+        map.setMapTypeId('blackwhitemap');
+      });
+
+      $(controlDiv).append(controlUI);
+    }
+
+    function initialize() {
+
+      var mapOptions = {
+          zoom: 10,
+          center: companyPos,
+          mapTypeControl: true,
+          mapTypeControlOptions: {
+            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            mapTypeIds: [
+              google.maps.MapTypeId.ROADMAP,
+              google.maps.MapTypeId.SATELLITE
+              ]
+          }
+          //mapTypeId: google.maps.MapTypeId.ROADMAP
+          // mapTypeControlOptions: {
+          // }
+      };
+
+      map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+    /* Set marker */
+      var marker = new google.maps.Marker({
+      position: companyPos,
+      map: map,
+      icon: 'images/marker.png',
+      title:"Company Name Marker",
+      });
+
+      marker.setMap(map);
+
+    /* Set description for marker */
+      var infowindow = new google.maps.InfoWindow({
+        content:"Info about company with lots of details!"
+        });
+
+    /* Show description after clicking the marker */
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map,marker);
+      });
+
+
+    // Create the DIV to hold the control and call the CenterControl() constructor
+    // passing in this DIV.
+      var centerControlDiv = document.createElement('div');
+      var centerControl = new CenterControl(centerControlDiv, map);
+
+      centerControlDiv.index = 1;
+      map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
+
+      var colorControlDiv = document.createElement('div');
+      var colorControl = new ColorControl(colorControlDiv, map);
+
+      colorControlDiv.index = 2;
+      map.controls[google.maps.ControlPosition.TOP_LEFT].push(colorControlDiv);
+
+
+      var mapStyles = [
+        {
+          "stylers": [
+            { "saturation": -100 }
+          ]
+        },{
+        }
+      ]
+
+      var styledMapOptions = {};
+
+      var blackWhiteMapType = new google.maps.StyledMapType(
+          mapStyles, styledMapOptions);
+
+      map.mapTypes.set('blackwhitemap', blackWhiteMapType);
+      map.setMapTypeId('blackwhitemap');
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+  </script>
+ -->
+
 </head>
+<body>
   <div class="wrapper-all">
     <div class="wrapper-header">
       <header class="header clearfix">
@@ -331,11 +505,10 @@
           </div>
         </section>
         <section class="footer__bottompanel">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d273103.4456344945!2d-119.86890609127354!3d34.43963401654323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e914c76f2d83d5%3A0xc8d13a64d7ba7648!2z0KHQsNC90YLQsC3QkdCw0YDQsdCw0YDQsCwg0JrQsNC70LjRhNC-0YDQvdC40Y8sINCh0KjQkA!5e0!3m2!1sru!2sru!4v1453468545864" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <div id="google-map"></div>
         </section>
       </footer>
     </div>
   </div>
-<body>
 </body>
 </html>

@@ -1011,6 +1011,10 @@ h5 {
   font-size: 14px;
   color: #fff; }
 
+#google-map {
+  width: 100%;
+  height: 480px; }
+
 /* OTHER STYLES */
 .fogging {
   position: fixed;
