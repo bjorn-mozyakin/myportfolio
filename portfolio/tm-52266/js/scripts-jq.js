@@ -7,7 +7,7 @@ $(document).ready(function(){
   } else { // IE8-
     window.attachEvent("onmousewheel", onWheel);
   }
-/* -------------------------------- */
+/* ----Show/Hide Submenu---- */
   $("ul.header__nav__menu li").hover(showSubmenu, hideSubmenu);
 /* -------------------------------- */
   var timerSlider = setInterval(changeImgInSlider, 5000);
@@ -26,6 +26,11 @@ $(document).ready(function(){
 /* -------------------------------- */
 /* -------------------------------- */
   function onWheel(e) {
+
+    if ($('.fogging')[0]) return;
+    /* Check it, because we shouldn't have ability to scroll while
+    we look at Large-Img*/
+
     var delta = -e.deltaY  / 100 || e.wheelDelta / 120 || -e.detail / 3;
     var time = 500;
     var distance = 200;
@@ -40,7 +45,7 @@ $(document).ready(function(){
       e.returnValue = false; // for IE8- ?
     }
   }
-/* -------------------------------- */
+/* ----Show/Hide Submenu---- */
   function showSubmenu(e) {
     var target = e.target;
     var relatedTarget = e.relatedTarget;
@@ -66,14 +71,9 @@ $(document).ready(function(){
   function changeImgInSlider() {
     var imgnum = $('.slider__images__image_active').data('imgnum');
 
-    // $('.slider__images__image_active').fadeOut(500);
-    // $('.slider__captions__caption_active').fadeOut(500);
-    // $('.slider__captions__circles__circle_active').fadeOut(500);
-
     $('.slider__images__image_active').removeClass('slider__images__image_active');
     $('.slider__captions__caption_active').removeClass('slider__captions__caption_active');
     $('.slider__captions__circles__circle_active').removeClass('slider__captions__circles__circle_active');
-
 
     imgnum++;
     if (imgnum > 3) imgnum = 1;
@@ -100,8 +100,10 @@ $(document).ready(function(){
     timerSlider = setInterval(changeImgInSlider, 5000);
   }
 
-/* -------------------------------- */
+/* ----Mignify/Minify IMG---- */
   function magnifyImg(e) {
+    clearTimeout(timerSlider);
+
     var target = e.target;
 
     e.preventDefault();
@@ -163,6 +165,7 @@ $(document).ready(function(){
   function hideAll() {
     $('.fogging').remove();
     $('body').css({'overflow': ''});
+    timerSlider = setInterval(changeImgInSlider, 5000);
   }
 /* -------------------------------- */
   function animateElements(){
