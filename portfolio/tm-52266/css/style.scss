@@ -141,6 +141,7 @@
 /* MAIN LAYOUT */
   .wrapper-all {
     width: 100%;
+    outline: 2px solid yellow;
   }
 
   .wrapper-header {
@@ -165,7 +166,9 @@
   }
 
   .wrapper-whatwedo {
+    box-sizing: border-box;
     width: 100%;
+    padding: 0 20px;
     background:$colorWhite;
     //outline: 2px dotted green;
   }
@@ -183,7 +186,9 @@
   }
 
   .ourservices {
+    box-sizing: border-box;
     width: 100%;
+    padding: 0 20px;
     max-width: $max-width;
     margin: 0 auto;
   }
@@ -201,6 +206,8 @@
   }
 
   .wrapper-ourteam {
+    box-sizing: border-box;
+    padding: 0 20px;
     width: 100%;
     background: $colorBgGrayLight;
     //outline: 2px dotted green;
@@ -230,17 +237,21 @@
   }
 
   .footer__toppanel {
+    box-sizing: border-box;
     width: 100%;
     max-width: $max-width;
     margin: 0 auto;
+    padding: 0 20px;
     background: $colorBgMain;
     //outline: 2px dotted yellow;
   }
 
   .footer__middlepanel {
+    box-sizing: border-box;
     width: 100%;
     max-width: $max-width;
     margin: 0 auto;
+    padding: 0 20px;
     background: $colorBgMain;
     //outline: 2px dotted yellow;
   }
@@ -255,6 +266,7 @@
   .header__logo {
     float: left;
     height: $headerHeight;
+    //outline: 50px solid green;
   }
 
   .header__logo img {
@@ -287,6 +299,7 @@
     vertical-align: middle;
     margin-left: -4px;
     margin-left: 32px;
+    text-align: left;
     //outline: 1px dotted yellow;
 
     &:first-child {
@@ -454,7 +467,7 @@
       display: inline-block;
       vertical-align: middle;
       height: $sliderImageHeight;
-      outline: 3px solid maroon;
+      //outline: 3px solid maroon;
     }
   }
 
@@ -543,27 +556,13 @@
     //position: relative;
     left: 0;
     bottom: 0;
-
-    //width: 100%;
-    //height: $sliderImageHeight;
-    //overflow: hidden;
-    //background:lime;
-    //opacity: 0.5;
-    //outline: 20px solid red;
   }
 
   .slider__images__image {
     position: absolute;
     left: 0;
     bottom: 0;
-//    height: $sliderImageHeight;
-
-    //outline: 3px solid gray;
     opacity: 0;
-    //display: none;
-    //width: 100%;
-    //height: 716px;
-    //z-index: -2;
     transition: all 0.5s linear;
   }
 
@@ -718,7 +717,7 @@
     display: inline-block;
     width: 50%;
     margin: 20px 0;
-    padding: 0 50px;
+    padding: 0 10px;
     font-size: 16px;
     //outline: 1px dotted red;
 
@@ -908,6 +907,7 @@
     vertical-align: top;
     font-size: 0;
     text-align: justify;
+    overflow: hidden; /* Need fir hiding block before showing, when left: 100px*/
     //outline: 1px solid orange;
 
     &:after {
@@ -920,6 +920,7 @@
   .ourprojects__main__right__ac {
     display: inline-block;
     @include font-size(1);
+
 
     position: relative;
     left: 100px;
@@ -1359,3 +1360,264 @@
   }
 
 /* MEDIA QUIERIES */
+  @media (max-width: 1620px) {
+    .header__nav__menu>li>a {
+      @include font-size(1.5);
+    }
+  }
+
+  @media (max-width: 1560px) {
+
+    .header__nav__menu>li>a {
+      @include font-size(1.3);
+    }
+  }
+
+
+  @media (max-width: 1480px) {
+    .header__nav {
+      clear: both;
+      float: none;
+      text-align: center;
+      outline: 1px solid red;
+    }
+
+    .header__nav__menu {
+      margin-right: 0;
+      outline: 2px solid green;
+    }
+
+    .header__nav__menu>li>a {
+      @include font-size(1.7);
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .whatwedo,
+    .ourservices,
+    .ourprojects,
+    .ourteam,
+    .newsletter,
+    .footer__toppanel,
+    .footer__middlepanel {
+      max-width: 940px;
+    }
+
+    .whatwedo__header__description {
+      padding: 10px 0;
+    }
+
+    .ourservices__list__item {
+      padding: 0 10px;
+    }
+
+    .whatwedo__list__item__img {
+      img {
+        width: 300px;
+      }
+    }
+
+    .ourprojects__main__left {
+      padding: 0 20px;
+    }
+
+    .ourprojects__main__right {
+      padding: 0 20px;
+    }
+
+    // .ourprojects__main__right__ac {
+    //   position: relative;
+    //   left: 10px; /* Should have the same size with .ourprojects__main__right */
+    // }
+
+    .ourteam__team__member__photo {
+      img {
+        width: 140px;
+      }
+    }
+
+    .newsletter__info,
+    .newsletter__signup {
+      padding: 0 20px;
+    }
+
+    .newsletter__signup {
+      input {
+        &[name="email"] {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 980px) {
+    .header__nav__menu>li>a {
+      @include font-size(1.4);
+    }
+
+    .slider__outer {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      text-align: center;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 500px;
+        //outline: 3px solid maroon;
+      }
+    }
+
+    .slider__captions {
+      position: relative;
+      left: 0;
+      top: 0;
+      height: 300px;
+      margin-bottom: 20px;
+      vertical-align: bottom;
+    }
+
+    .slider__captions__caption {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 250px;
+      padding: 40px;
+    }
+
+    .slider__captions__caption__title {
+      font-size: 46px;
+      margin-bottom: 30px;
+    }
+
+    .slider__captions__caption__text {
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    .slider__captions__circles {
+      position: absolute;
+      left: 0;
+      top: 250px;
+      height: 50px;
+    }
+
+  .slider__images__image {
+    height: 656px;
+    // Original Container-height = 716px;
+    // Original IMG-height = 939px (716px * ~1.311);
+    // If we set NEW-Container IMG = 500 px
+    // Then NEW-IMG-height = 656px (500px * ~1.311)
+  }
+
+
+    .whatwedo,
+    .ourservices,
+    .ourprojects,
+    .ourteam,
+    .newsletter,
+    .footer__toppanel,
+    .footer__middlepanel {
+      max-width: 724px;
+    }
+
+    .whatwedo__list__item__img {
+      img {
+        width: 228px;
+      }
+    }
+
+   .ourprojects__main__left {
+      display: block;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .ourprojects__main__right {
+      display: block;
+      width: 100%;
+      padding: 0 10px;
+      //outline: 1px solid orange;
+    }
+
+    .ourteam__team {
+      width: 100%;
+      font-size: 0;
+      //outline: 1px solid lime;
+    }
+
+    .ourteam__team__member {
+      display: inline-block;
+      width: 33.3%;
+      @include font-size(1);
+      //outline: 1px solid red;
+    }
+
+    .ourteam__team__member__photo {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto;
+    }
+
+   .newsletter__signup {
+      input {
+        &[name="email"] {
+          width: 200px;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .footer__toppanel__contacts__phone {
+      padding: 0 20px;
+    }
+
+    .footer__toppanel__contacts__email {
+      padding-left: 20px;
+    }
+
+
+    .footer__middlepanel__menu {
+      float: none;
+      text-align: center;
+    }
+
+    .footer__middlepanel__copyright {
+      float: none;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .whatwedo,
+    .ourservices,
+    .ourprojects,
+    .ourteam,
+    .newsletter,
+    .footer__toppanel,
+    .footer__middlepanel {
+      max-width: 724px;
+    }
+
+    .whatwedo__list__item__img {
+      img {
+        width: 228px;
+      }
+    }
+
+    .ourprojects__main__left {
+      padding: 0 20px;
+    }
+
+    .ourprojects__main__right {
+      padding: 0 10px;
+    }
+
+    .ourteam__team__member__photo {
+      img {
+        width: 100px;
+      }
+    }
+  }

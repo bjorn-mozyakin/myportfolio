@@ -78,7 +78,8 @@ h5 {
 
 /* MAIN LAYOUT */
 .wrapper-all {
-  width: 100%; }
+  width: 100%;
+  outline: 2px solid yellow; }
 
 .wrapper-header {
   width: 100%;
@@ -96,7 +97,9 @@ h5 {
   width: 100%; }
 
 .wrapper-whatwedo {
+  box-sizing: border-box;
   width: 100%;
+  padding: 0 20px;
   background: #fff; }
 
 .whatwedo {
@@ -109,7 +112,9 @@ h5 {
   background: #fff; }
 
 .ourservices {
+  box-sizing: border-box;
   width: 100%;
+  padding: 0 20px;
   max-width: 1200px;
   margin: 0 auto; }
 
@@ -123,6 +128,8 @@ h5 {
   margin: 0 auto; }
 
 .wrapper-ourteam {
+  box-sizing: border-box;
+  padding: 0 20px;
   width: 100%;
   background: #F7F7F7; }
 
@@ -144,15 +151,19 @@ h5 {
   width: 100%; }
 
 .footer__toppanel {
+  box-sizing: border-box;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
   background: #686766; }
 
 .footer__middlepanel {
+  box-sizing: border-box;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
   background: #686766; }
 
 .footer__bottompanel {
@@ -185,7 +196,8 @@ h5 {
   display: inline-block;
   vertical-align: middle;
   margin-left: -4px;
-  margin-left: 32px; }
+  margin-left: 32px;
+  text-align: left; }
   .header__nav__menu > li:first-child {
     margin-left: none; }
 
@@ -311,8 +323,7 @@ h5 {
     content: '';
     display: inline-block;
     vertical-align: middle;
-    height: 716px;
-    outline: 3px solid maroon; }
+    height: 716px; }
 
 .slider__captions {
   position: relative;
@@ -529,7 +540,7 @@ h5 {
   display: inline-block;
   width: 50%;
   margin: 20px 0;
-  padding: 0 50px;
+  padding: 0 10px;
   font-size: 16px; }
   .ourservices__list__item h5 {
     text-align: left; }
@@ -707,7 +718,9 @@ h5 {
   padding: 0 50px;
   vertical-align: top;
   font-size: 0;
-  text-align: justify; }
+  text-align: justify;
+  overflow: hidden;
+  /* Need fir hiding block before showing, when left: 100px*/ }
   .ourprojects__main__right:after {
     content: '';
     display: inline-block;
@@ -1061,5 +1074,184 @@ h5 {
   display: block; }
 
 /* MEDIA QUIERIES */
+@media (max-width: 1620px) {
+  .header__nav__menu > li > a {
+    font-size: 21pxpx;
+    font-size: 1.5rem; } }
+@media (max-width: 1560px) {
+  .header__nav__menu > li > a {
+    font-size: 18.2pxpx;
+    font-size: 1.3rem; } }
+@media (max-width: 1480px) {
+  .header__nav {
+    clear: both;
+    float: none;
+    text-align: center;
+    outline: 1px solid red; }
+
+  .header__nav__menu {
+    margin-right: 0;
+    outline: 2px solid green; }
+
+  .header__nav__menu > li > a {
+    font-size: 23.8pxpx;
+    font-size: 1.7rem; } }
+@media (max-width: 1200px) {
+  .whatwedo,
+  .ourservices,
+  .ourprojects,
+  .ourteam,
+  .newsletter,
+  .footer__toppanel,
+  .footer__middlepanel {
+    max-width: 940px; }
+
+  .whatwedo__header__description {
+    padding: 10px 0; }
+
+  .ourservices__list__item {
+    padding: 0 10px; }
+
+  .whatwedo__list__item__img img {
+    width: 300px; }
+
+  .ourprojects__main__left {
+    padding: 0 20px; }
+
+  .ourprojects__main__right {
+    padding: 0 20px; }
+
+  .ourteam__team__member__photo img {
+    width: 140px; }
+
+  .newsletter__info,
+  .newsletter__signup {
+    padding: 0 20px; }
+
+  .newsletter__signup input[name="email"] {
+    margin-right: 20px; } }
+@media (max-width: 980px) {
+  .header__nav__menu > li > a {
+    font-size: 19.6pxpx;
+    font-size: 1.4rem; }
+
+  .slider__outer {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    text-align: center; }
+    .slider__outer:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 500px; }
+
+  .slider__captions {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 300px;
+    margin-bottom: 20px;
+    vertical-align: bottom; }
+
+  .slider__captions__caption {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 250px;
+    padding: 40px; }
+
+  .slider__captions__caption__title {
+    font-size: 46px;
+    margin-bottom: 30px; }
+
+  .slider__captions__caption__text {
+    font-size: 30px;
+    line-height: 30px; }
+
+  .slider__captions__circles {
+    position: absolute;
+    left: 0;
+    top: 250px;
+    height: 50px; }
+
+  .slider__images__image {
+    height: 656px; }
+
+  .whatwedo,
+  .ourservices,
+  .ourprojects,
+  .ourteam,
+  .newsletter,
+  .footer__toppanel,
+  .footer__middlepanel {
+    max-width: 724px; }
+
+  .whatwedo__list__item__img img {
+    width: 228px; }
+
+  .ourprojects__main__left {
+    display: block;
+    width: 100%;
+    padding: 0 20px; }
+
+  .ourprojects__main__right {
+    display: block;
+    width: 100%;
+    padding: 0 10px; }
+
+  .ourteam__team {
+    width: 100%;
+    font-size: 0; }
+
+  .ourteam__team__member {
+    display: inline-block;
+    width: 33.3%;
+    font-size: 14pxpx;
+    font-size: 1rem; }
+
+  .ourteam__team__member__photo {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto; }
+
+  .newsletter__signup input[name="email"] {
+    width: 200px;
+    margin-right: 5px; }
+
+  .footer__toppanel__contacts__phone {
+    padding: 0 20px; }
+
+  .footer__toppanel__contacts__email {
+    padding-left: 20px; }
+
+  .footer__middlepanel__menu {
+    float: none;
+    text-align: center; }
+
+  .footer__middlepanel__copyright {
+    float: none;
+    text-align: center; } }
+@media (max-width: 760px) {
+  .whatwedo,
+  .ourservices,
+  .ourprojects,
+  .ourteam,
+  .newsletter,
+  .footer__toppanel,
+  .footer__middlepanel {
+    max-width: 724px; }
+
+  .whatwedo__list__item__img img {
+    width: 228px; }
+
+  .ourprojects__main__left {
+    padding: 0 20px; }
+
+  .ourprojects__main__right {
+    padding: 0 10px; }
+
+  .ourteam__team__member__photo img {
+    width: 100px; } }
 
 /*# sourceMappingURL=style.css.map */
