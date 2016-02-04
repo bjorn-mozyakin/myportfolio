@@ -466,7 +466,7 @@
     width: 400px;
     display: inline-block;
     vertical-align: middle;
-    outline: 10px solid lime;
+    //outline: 10px solid lime;
     z-index: 2;
   }
 
@@ -481,7 +481,7 @@
     padding: 50px;
     background: $colorWhiteTransp;
     opacity: 0;
-    transition: all 1s;
+    transition: all 0.5s;
     //outline: 5px solid blue;
     //z-index: 3;
   }
