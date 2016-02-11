@@ -67,10 +67,16 @@ h1 {
   line-height: 60px;
   color: #fe8301; }
 
+h2 {
+  font-size: 46.2pxpx;
+  font-size: 3.3rem;
+  line-height: 50px;
+  color: #292625; }
+
 h4 {
-  line-height: 24px;
   font-size: 20.02pxpx;
-  font-size: 1.43rem; }
+  font-size: 1.43rem;
+  line-height: 24px; }
 
 h5 {
   font-size: 20.02pxpx;
@@ -362,10 +368,8 @@ h5 {
   opacity: 1; }
 
 .slider__captions__caption__title {
-  color: #292625;
   font-weight: bold;
-  font-size: 56px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: left; }
 
 .slider__captions__caption__text {

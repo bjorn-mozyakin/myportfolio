@@ -2,6 +2,7 @@ $(document).ready(function(){
   var timerIdBegin;
   var timerIdEnd;
 
+/* -----Smooth Mouse Scroll----- */
   if (window.addEventListener) {
     window.addEventListener("wheel", onWheel);
   } else { // IE8-
@@ -9,13 +10,13 @@ $(document).ready(function(){
   }
 /* ----Show/Hide Submenu---- */
   $("ul.header__nav__menu li").hover(showSubmenu, hideSubmenu);
-/* -------------------------------- */
+/* ----Star/Stop Slideshow---- */
   var timerSlider = setInterval(changeImgInSlider, 5000);
 
   $('.slider__captions__circles__circle').on('click', changeImgInSlider2);
-/* -------------------------------- */
+/* -----Animate Elements---- */
   $(window).on('scroll', animateElements);
-/* -------------------------------- */
+/* -----Mignify/Minify Images---- */
   $('.magnify').on('click', magnifyImg);
 
   $(document).on('keydown', keyboardHandler);
@@ -33,7 +34,7 @@ $(document).ready(function(){
 
     var delta = -e.deltaY  / 100 || e.wheelDelta / 120 || -e.detail / 3;
     var time = 500;
-    var distance = 200;
+    var distance = 1000;
 
     $('html, body').stop().animate({
         scrollTop: $(window).scrollTop() - (distance * delta)
@@ -67,7 +68,7 @@ $(document).ready(function(){
       $(list).slideUp( 300 );
     }, 500);
   }
-/* -------------------------------- */
+/* ----Start/Stop Slideshow---- */
   function changeImgInSlider() {
     var imgnum = $('.slider__images__image_active').data('imgnum');
 
@@ -99,7 +100,6 @@ $(document).ready(function(){
 
     timerSlider = setInterval(changeImgInSlider, 5000);
   }
-
 /* ----Mignify/Minify IMG---- */
   function magnifyImg(e) {
     clearTimeout(timerSlider);
@@ -171,6 +171,13 @@ $(document).ready(function(){
   function animateElements(){
     var currentHeight = $(this).scrollTop() + $(window).height();
     var element;
+    var heightDivider;
+
+    if (parseFloat($(window).width()) > 760) {
+      heightDivider= 2;
+    } else {
+      heightDivider= 4;
+    }
 
     $('.slider__images').animate({'bottom': '-' + $(this).scrollTop() / 5 + 'px'}, 10);
 
@@ -178,7 +185,7 @@ $(document).ready(function(){
     element = $(".whatwedo__header");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/2 +
+          $(element).height()/heightDivider +
           parseFloat($(element).css('margin-top')) +
           parseFloat($(element).css('border-top')) +
           parseFloat($(element).css('padding-top'))
@@ -190,7 +197,7 @@ $(document).ready(function(){
     element = $(".whatwedo__list");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/2 +
+          $(element).height()/heightDivider +
           parseFloat($(element).css('margin-top')) +
           parseFloat($(element).css('border-top')) +
           parseFloat($(element).css('padding-top'))
@@ -202,7 +209,7 @@ $(document).ready(function(){
     element = $(".ourservices__header");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/2 +
+          $(element).height()/heightDivider +
           parseFloat($(element).css('margin-top')) +
           parseFloat($(element).css('border-top')) +
           parseFloat($(element).css('padding-top'))
@@ -214,7 +221,7 @@ $(document).ready(function(){
     element = $(".ourservices__list");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/2 +
+          $(element).height()/heightDivider +
           parseFloat($(element).css('margin-top')) +
           parseFloat($(element).css('border-top')) +
           parseFloat($(element).css('padding-top'))
@@ -226,7 +233,7 @@ $(document).ready(function(){
     element = $(".ourservices__button");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/2 +
+          $(element).height()/heightDivider +
           parseFloat($(element).css('margin-top')) +
           parseFloat($(element).css('border-top')) +
           parseFloat($(element).css('padding-top'))
@@ -238,7 +245,7 @@ $(document).ready(function(){
     element = $(".ourprojects__header");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/2 +
+          $(element).height()/heightDivider +
           parseFloat($(element).css('margin-top')) +
           parseFloat($(element).css('border-top')) +
           parseFloat($(element).css('padding-top'))
@@ -250,7 +257,7 @@ $(document).ready(function(){
     element = $(".ourprojects__main__left");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/2 +
+          $(element).height()/heightDivider +
           parseFloat($(element).css('margin-top')) +
           parseFloat($(element).css('border-top')) +
           parseFloat($(element).css('padding-top'))
@@ -262,7 +269,7 @@ $(document).ready(function(){
     element = $(".ourprojects__main__right__ac");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/2 +
+          $(element).height()/heightDivider +
           parseFloat($(element).css('margin-top')) +
           parseFloat($(element).css('border-top')) +
           parseFloat($(element).css('padding-top'))
@@ -274,7 +281,7 @@ $(document).ready(function(){
     element = $(".ourteam__header");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/2 +
+          $(element).height()/heightDivider +
           parseFloat($(element).css('margin-top')) +
           parseFloat($(element).css('border-top')) +
           parseFloat($(element).css('padding-top'))
@@ -286,7 +293,7 @@ $(document).ready(function(){
     element = $(".ourteam__team");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/2 +
+          $(element).height()/heightDivider +
           parseFloat($(element).css('margin-top')) +
           parseFloat($(element).css('border-top')) +
           parseFloat($(element).css('padding-top'))

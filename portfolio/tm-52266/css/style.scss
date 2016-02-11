@@ -129,9 +129,15 @@
     color: $colorOrange;
   }
 
+  h2 {
+    @include font-size(3.3);
+    line-height: 50px;
+    color: $colorBlack;
+  }
+
   h4 {
-    line-height: 24px;
     @include font-size(1.43);
+    line-height: 24px;
   }
 
   h5 {
@@ -518,10 +524,9 @@
   }
 
   .slider__captions__caption__title {
-    color: $colorBlack;
     font-weight: bold;
-    font-size: 56px;
-    margin-bottom: 50px;
+    //font-size: 56px;
+    margin-bottom: 30px;
     text-align: left;
   }
 
