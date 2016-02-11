@@ -64,6 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 53.9pxpx;
   font-size: 3.85rem;
+  line-height: 60px;
   color: #fe8301; }
 
 h4 {
@@ -268,6 +269,16 @@ h5 {
 .header__nav__menu__submenu__submenu > li > a:hover {
   background: #fe8301; }
 
+.header__nav__mobile {
+  display: none;
+  padding: 20px; }
+
+.header__nav__mobile__menu {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer; }
+
 .header__search {
   float: right; }
 
@@ -405,7 +416,7 @@ h5 {
 
 /* Whatwedo */
 .whatwedo__header {
-  padding: 80px 0 50px;
+  padding: 80px 20px 50px;
   opacity: 0;
   transition: all 0.5s; }
 
@@ -492,7 +503,7 @@ h5 {
 
 /* Ourservices */
 .ourservices__header {
-  padding-top: 50px;
+  padding: 50px 20px 0;
   opacity: 0;
   transition: all 1s; }
 
@@ -646,7 +657,7 @@ h5 {
 
 /* Ourprojects */
 .ourprojects__header {
-  padding-top: 80px;
+  padding: 80px 20px 0;
   opacity: 0;
   transition: all 1s; }
 
@@ -773,7 +784,7 @@ h5 {
 
 /* Our team */
 .ourteam__header {
-  padding-top: 80px;
+  padding: 80px 20px 0;
   opacity: 0;
   transition: all 1s; }
 
@@ -1110,7 +1121,7 @@ h5 {
     max-width: 940px; }
 
   .whatwedo__header__description {
-    padding: 10px 0; }
+    padding: 10px 20px; }
 
   .ourservices__list__item {
     padding: 0 10px; }
@@ -1210,6 +1221,7 @@ h5 {
   .ourteam__team__member {
     display: inline-block;
     width: 33.3%;
+    margin: 0 0 20px;
     font-size: 14pxpx;
     font-size: 1rem; }
 
@@ -1245,16 +1257,143 @@ h5 {
   .footer__middlepanel {
     max-width: 724px; }
 
-  .whatwedo__list__item__img img {
-    width: 228px; }
+  .header__logo {
+    float: none; }
+    .header__logo img {
+      margin: 0 auto; }
+
+  .header__search {
+    display: none; }
+
+  .header__nav {
+    display: none; }
+
+  .header__nav__mobile {
+    display: block; }
+
+  .whatwedo__list__item {
+    display: block;
+    border-bottom: none;
+    padding-bottom: 35px; }
+
+  .whatwedo__list__item__img {
+    margin-bottom: 0; }
+    .whatwedo__list__item__img img {
+      width: 100%; }
+
+  .ourservices__list__item {
+    display: block;
+    width: 100%; }
 
   .ourprojects__main__left {
     padding: 0 20px; }
 
   .ourprojects__main__right {
-    padding: 0 10px; }
+    padding: 0 20px; }
+
+  .ourprojects__main__right__ac {
+    display: block; }
+
+  .ourteam__team__member {
+    display: inline-block;
+    width: 50%; }
 
   .ourteam__team__member__photo img {
-    width: 100px; } }
+    width: 100%; }
+
+  .newsletter__info {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 80px 20px 40px;
+    border-right: none; }
+
+  .newsletter__signup {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0 20px 80px; }
+
+  .footer__toppanel__contacts {
+    padding: 20px 0 0;
+    text-align: center; }
+
+  .footer__toppanel__contacts__phone {
+    display: block;
+    margin: 20px 0;
+    border-right: none; }
+
+  .footer__toppanel__contacts__email {
+    display: block;
+    margin: 20px 0;
+    padding-left: 0; }
+
+  .footer__middlepanel__menu {
+    float: none;
+    margin: 0;
+    padding: 20px 0; }
+    .footer__middlepanel__menu li {
+      display: block;
+      padding: 0; }
+
+  .footer__middlepanel__copyright {
+    float: none;
+    margin: 0 auto; } }
+@media (max-width: 550px) {
+  .header__logo {
+    height: 100%;
+    padding: 0 20px; }
+    .header__logo img {
+      width: 100%; }
+
+  .ourservices__list__item {
+    text-align: center; }
+    .ourservices__list__item h5 {
+      text-align: center; }
+
+  .ourservices__list__item__icon {
+    float: none;
+    display: inline-block;
+    margin-left: 0; } }
+@media (max-width: 480px) {
+  h1 {
+    font-size: 42pxpx;
+    font-size: 3rem; }
+
+  .slider__captions {
+    width: 260px;
+    height: 200px;
+    margin-bottom: 20px; }
+
+  .slider__captions__caption {
+    width: 260px;
+    height: 170px;
+    padding: 20px; }
+
+  .slider__captions__caption__title {
+    font-size: 36px;
+    margin-bottom: 10px;
+    padding: 0; }
+
+  .slider__captions__caption__text {
+    font-size: 20px;
+    line-height: 20px; }
+
+  .slider__captions__circles {
+    top: 170px;
+    width: 260px;
+    height: 30px; }
+
+  .ourteam__team__member {
+    display: inline-block;
+    width: 100%; } }
+@media (max-width: 380px) {
+  .ourservices__button__bg a {
+    padding: 24px 30px; }
+
+  .newsletter__signup input[name="email"] {
+    width: 150px;
+    font-size: 11.9pxpx;
+    font-size: 0.85rem; } }
 
 /*# sourceMappingURL=style.css.map */
