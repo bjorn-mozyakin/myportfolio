@@ -47,17 +47,18 @@ $(document).ready(function(){
 
     // Create the DIV to hold the control and call the CenterControl() constructor
     // passing in this DIV.
-    var centerControlDiv = document.createElement('div');
-    var centerControl = new CenterControl(centerControlDiv, map);
-
-    centerControlDiv.index = 1;
-    map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
-
     var colorControlDiv = document.createElement('div');
     var colorControl = new ColorControl(colorControlDiv, map);
 
-    colorControlDiv.index = 2;
+    colorControlDiv.index = 1;
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(colorControlDiv);
+
+    var centerControlDiv = document.createElement('div');
+    var centerControl = new CenterControl(centerControlDiv, map);
+
+    centerControlDiv.index = 2;
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(centerControlDiv);
+
 
     discolorMap();
   }
@@ -86,21 +87,7 @@ $(document).ready(function(){
 
     $(controlUI)
       .attr('title', 'Click to recenter the map')
-      .css({
-        'color': 'rgb(25,25,25)',
-        'font-family': 'Roboto,Arial,sans-serif',
-        'fontSize': '12px',
-        'height': '35px',
-        'line-height': '35px',
-        'padding-left': '25px',
-        'padding-right': '25px',
-        'background-color': '#fff',
-        'border-radius': '3px',
-        'box-shadow': '0 2px 6px rgba(0,0,0,.3)',
-        'cursor': 'pointer',
-        'margin-top': '10px',
-        'text-align': 'center'
-      })
+      .addClass('googlemap-centercontrol')
       .html('Центрировать карту')
       .hover(function(){
           $(this).css("background-color", "#E5E5E5");
@@ -119,21 +106,7 @@ $(document).ready(function(){
 
     $(controlUI)
       .attr('title', 'Click to discolor the map 1')
-      .css({
-        'color': 'rgb(25,25,25)',
-        'font-family': 'Roboto,Arial,sans-serif',
-        'fontSize': '12px',
-        'height': '35px',
-        'line-height': '35px',
-        'padding-left': '25px',
-        'padding-right': '25px',
-        'background-color': '#fff',
-        'border-radius': '3px',
-        'box-shadow': '0 2px 6px rgba(0,0,0,.3)',
-        'cursor': 'pointer',
-        'margin-top': '10px',
-        'text-align': 'center'
-      })
+      .addClass('googlemap-colorcontrol')
       .html('Обесцветить карту')
       .hover(function(){
           $(this).css("background-color", "#E5E5E5");
