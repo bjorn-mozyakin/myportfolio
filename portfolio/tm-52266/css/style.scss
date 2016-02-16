@@ -475,10 +475,12 @@
 /* Slider */
   .slider__outer {
     position: relative;
-    width: 100%;
+    width: 1920px;
+    max-width: 100%;
     height: $sliderImageHeight;
+    margin: 0 auto;
     overflow: hidden;
-    //outline: 30px solid orange;
+    //outline: 10px solid orange;
     //background: yellow;
 
     &:before {
@@ -574,6 +576,7 @@
     //position: relative;
     left: 0;
     bottom: 0;
+    //outline: 20px solid red;
   }
 
   .slider__images__image {
@@ -582,6 +585,7 @@
     bottom: 0;
     opacity: 0;
     transition: all 0.5s linear;
+    //outline: 20px dashed blue;
   }
 
   .slider__images__image_active{
