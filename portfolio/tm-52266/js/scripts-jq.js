@@ -3,11 +3,14 @@ $(document).ready(function(){
   var timerIdEnd;
 
 /* -----Smooth Mouse Scroll----- */
-  if (window.addEventListener) {
-    window.addEventListener("wheel", onWheel);
-  } else { // IE8-
-    window.attachEvent("onmousewheel", onWheel);
-  }
+
+  // if (window.addEventListener) {
+  //   window.addEventListener("wheel", onWheel);
+  // } else { // IE8-
+  //   window.attachEvent("onmousewheel", onWheel);
+  // }
+
+  $(document).bind( 'mousewheel', onWheel);
 /* ----Show/Hide Submenu---- */
   $("ul.header__nav__menu li").hover(showSubmenu, hideSubmenu);
 /* ----Star/Stop Slideshow---- */
@@ -16,6 +19,8 @@ $(document).ready(function(){
   $('.slider__captions__circles__circle').on('click', changeImgInSlider2);
 /* -----Animate Elements---- */
   $(window).on('scroll', animateElements);
+/* -----Scroll To Top---- */
+  $('.arrow-up').on('click', scrollToTop);
 /* -----Mignify/Minify Images---- */
   $('.magnify').on('click', magnifyImg);
 
@@ -31,10 +36,18 @@ $(document).ready(function(){
     if ($('.fogging')[0]) return;
     /* Check it, because we shouldn't have ability to scroll while
     we look at Large-Img*/
+    // var nt = $(window).scrollTop()-(e.deltaY*200);
+    // e.preventDefault();
 
+    // $(window).stop().animate( {
+    //   scrollTop : nt
+    // } , 500 );
+
+
+/*
     var delta = -e.deltaY  / 100 || e.wheelDelta / 120 || -e.detail / 3;
     var time = 500;
-    var distance = 1000;
+    var distance = 200;
 
     $('html, body').stop().animate({
         scrollTop: $(window).scrollTop() - (distance * delta)
@@ -44,7 +57,7 @@ $(document).ready(function(){
       e.preventDefault()
     } else {
       e.returnValue = false; // for IE8- ?
-    }
+    }*/
   }
 /* ----Show/Hide Submenu---- */
   function showSubmenu(e) {
@@ -167,16 +180,22 @@ $(document).ready(function(){
     $('body').css({'overflow': ''});
     timerSlider = setInterval(changeImgInSlider, 5000);
   }
-/* -------------------------------- */
+/* -----Animate Elements------ */
   function animateElements(){
     var currentHeight = $(this).scrollTop() + $(window).height();
     var element;
-    var heightDivider;
+    var heightAdditional;
+
+    if ($(this).scrollTop() > 0) {
+      $('.arrow-up').css({'display': 'block'});
+    } else {
+      $('.arrow-up').css({'display': 'none'});
+    }
 
     if (parseFloat($(window).width()) > 760) {
-      heightDivider= 2;
+      heightAdditional= 100;
     } else {
-      heightDivider= 4;
+      heightAdditional= 50;
     }
 
     $('.slider__images').animate({'bottom': '-' + $(this).scrollTop() / 5 + 'px'}, 10);
@@ -185,9 +204,9 @@ $(document).ready(function(){
     element = $(".whatwedo__header");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/heightDivider +
+          heightAdditional +
           parseFloat($(element).css('margin-top')) +
-          parseFloat($(element).css('border-top')) +
+          parseFloat($(element).css('border-top-width')) +
           parseFloat($(element).css('padding-top'))
         )
     {
@@ -197,9 +216,9 @@ $(document).ready(function(){
     element = $(".whatwedo__list");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/heightDivider +
+          heightAdditional +
           parseFloat($(element).css('margin-top')) +
-          parseFloat($(element).css('border-top')) +
+          parseFloat($(element).css('border-top-width')) +
           parseFloat($(element).css('padding-top'))
         )
     {
@@ -209,9 +228,9 @@ $(document).ready(function(){
     element = $(".ourservices__header");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/heightDivider +
+          heightAdditional +
           parseFloat($(element).css('margin-top')) +
-          parseFloat($(element).css('border-top')) +
+          parseFloat($(element).css('border-top-width')) +
           parseFloat($(element).css('padding-top'))
         )
     {
@@ -221,9 +240,9 @@ $(document).ready(function(){
     element = $(".ourservices__list");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/heightDivider +
+          heightAdditional +
           parseFloat($(element).css('margin-top')) +
-          parseFloat($(element).css('border-top')) +
+          parseFloat($(element).css('border-top-width')) +
           parseFloat($(element).css('padding-top'))
         )
     {
@@ -233,9 +252,9 @@ $(document).ready(function(){
     element = $(".ourservices__button");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/heightDivider +
+          heightAdditional +
           parseFloat($(element).css('margin-top')) +
-          parseFloat($(element).css('border-top')) +
+          parseFloat($(element).css('border-top-width')) +
           parseFloat($(element).css('padding-top'))
         )
     {
@@ -245,9 +264,9 @@ $(document).ready(function(){
     element = $(".ourprojects__header");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/heightDivider +
+          heightAdditional +
           parseFloat($(element).css('margin-top')) +
-          parseFloat($(element).css('border-top')) +
+          parseFloat($(element).css('border-top-width')) +
           parseFloat($(element).css('padding-top'))
         )
     {
@@ -257,9 +276,9 @@ $(document).ready(function(){
     element = $(".ourprojects__main__left");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/heightDivider +
+          heightAdditional +
           parseFloat($(element).css('margin-top')) +
-          parseFloat($(element).css('border-top')) +
+          parseFloat($(element).css('border-top-width')) +
           parseFloat($(element).css('padding-top'))
         )
     {
@@ -269,9 +288,9 @@ $(document).ready(function(){
     element = $(".ourprojects__main__right__ac");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/heightDivider +
+          heightAdditional +
           parseFloat($(element).css('margin-top')) +
-          parseFloat($(element).css('border-top')) +
+          parseFloat($(element).css('border-top-width')) +
           parseFloat($(element).css('padding-top'))
         )
     {
@@ -281,9 +300,9 @@ $(document).ready(function(){
     element = $(".ourteam__header");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/heightDivider +
+          heightAdditional +
           parseFloat($(element).css('margin-top')) +
-          parseFloat($(element).css('border-top')) +
+          parseFloat($(element).css('border-top-width')) +
           parseFloat($(element).css('padding-top'))
         )
     {
@@ -293,13 +312,21 @@ $(document).ready(function(){
     element = $(".ourteam__team");
     if (currentHeight >=
           $(element).offset().top +
-          $(element).height()/heightDivider +
+          heightAdditional +
           parseFloat($(element).css('margin-top')) +
-          parseFloat($(element).css('border-top')) +
+          parseFloat($(element).css('border-top-width')) +
           parseFloat($(element).css('padding-top'))
         )
     {
       $(element).addClass('ourteam__team_animated');
     }
+  }
+/* ---- Scroll To Top ---- */
+  function scrollToTop() {
+    //$(window).scrollTop(0);
+
+    $('html, body').animate({
+      'scrollTop': 0
+    }, 500)
   }
 });

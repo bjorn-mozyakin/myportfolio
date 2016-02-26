@@ -85,8 +85,7 @@ h5 {
 
 /* MAIN LAYOUT */
 .wrapper-all {
-  width: 100%;
-  outline: 2px solid yellow; }
+  width: 100%; }
 
 .wrapper-header {
   width: 100%;
@@ -529,28 +528,10 @@ h5 {
   padding: 40px 0 60px;
   font-size: 0;
   opacity: 0;
-  -moz-transform: scale(0);
-  /* ╨Ф╨╗╤П Firefox */
-  -ms-transform: scale(0);
-  /* ╨Ф╨╗╤П IE */
-  -webkit-transform: scale(0);
-  /* ╨Ф╨╗╤П Safari, Chrome, iOS */
-  -o-transform: scale(0);
-  /* ╨Ф╨╗╤П Opera */
-  transform: scale(0);
   transition: all 1s; }
 
 .ourservices__list_animated {
-  opacity: 1;
-  -moz-transform: scale(1);
-  /* ╨Ф╨╗╤П Firefox */
-  -ms-transform: scale(1);
-  /* ╨Ф╨╗╤П IE */
-  -webkit-transform: scale(1);
-  /* ╨Ф╨╗╤П Safari, Chrome, iOS */
-  -o-transform: scale(1);
-  /* ╨Ф╨╗╤П Opera */
-  transform: scale(1); }
+  opacity: 1; }
 
 .ourservices__list__item {
   box-sizing: border-box;
@@ -1045,6 +1026,23 @@ h5 {
   height: 480px; }
 
 /* OTHER STYLES */
+/* Arrow-up*/
+.arrow-up {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background: url(../images/arrow-up.jpg) no-repeat 0 0;
+  cursor: pointer;
+  z-index: 5; }
+  .arrow-up:hover {
+    box-shadow: 0 0 12px gold; }
+  .arrow-up:active {
+    opacity: 0.8; }
+
 /* Fogging */
 .fogging {
   position: fixed;
@@ -1054,7 +1052,7 @@ h5 {
   height: 100%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 3;
+  z-index: 10;
   /* Important to set z-index > z-index of slider_captions */ }
 
 .fogging:before {
@@ -1121,7 +1119,7 @@ h5 {
   color: #191919;
   cursor: pointer; }
 
-/**/
+/* Clearfix */
 .clearfix:after {
   content: '';
   clear: both;
@@ -1140,12 +1138,10 @@ h5 {
   .header__nav {
     clear: both;
     float: none;
-    text-align: center;
-    outline: 1px solid red; }
+    text-align: center; }
 
   .header__nav__menu {
-    margin-right: 0;
-    outline: 2px solid green; }
+    margin-right: 0; }
 
   .header__nav__menu > li > a {
     font-size: 23.8pxpx;

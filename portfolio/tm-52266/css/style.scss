@@ -148,7 +148,7 @@
 /* MAIN LAYOUT */
   .wrapper-all {
     width: 100%;
-    outline: 2px solid yellow;
+    //outline: 2px solid yellow;
   }
 
   .wrapper-header {
@@ -725,13 +725,13 @@
     //outline: 1px dotted blue;
 
     opacity: 0;
-    @include transformScale(0);
+    //@include transformScale(0);
     transition: all 1s;
   }
 
   .ourservices__list_animated {
     opacity: 1;
-    @include transformScale(1);
+    //@include transformScale(1);
   }
 
   .ourservices__list__item {
@@ -1331,6 +1331,29 @@
   }
 
 /* OTHER STYLES */
+/* Arrow-up*/
+  .arrow-up {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background: url(../images/arrow-up.jpg) no-repeat 0 0;
+    cursor: pointer;
+    z-index: 5;
+
+    &:hover {
+      box-shadow: 0 0 12px gold;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+
 /* Fogging */
   .fogging {
     position: fixed;
@@ -1340,7 +1363,7 @@
     height: 100%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 3;
+    z-index: 10;
     /* Important to set z-index > z-index of slider_captions */
   }
 
@@ -1380,6 +1403,7 @@
     border-radius: 8px;
     position: relative;
   }
+
 /* Google map styles */
   .googlemap-centercontrol {
     height: 35px;
@@ -1415,7 +1439,7 @@
   }
 
 
-/**/
+/* Clearfix */
   .clearfix:after {
     content:'';
     clear: both;
@@ -1441,12 +1465,12 @@
       clear: both;
       float: none;
       text-align: center;
-      outline: 1px solid red;
+      //outline: 1px solid red;
     }
 
     .header__nav__menu {
       margin-right: 0;
-      outline: 2px solid green;
+      //outline: 2px solid green;
     }
 
     .header__nav__menu>li>a {
