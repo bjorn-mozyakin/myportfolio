@@ -32,7 +32,10 @@ h2 {
   font-size: 2.4rem; }
 
 h5 {
-  font-family: 'Raleway', Helvetica, Arial, sans-serif; }
+  font-size: 25.2pxpx;
+  font-size: 1.4rem;
+  font-weight: normal;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif; }
 
 /* MAIN LAYOUT */
 .wrapper-all {
@@ -220,17 +223,88 @@ h5 {
   color: #000;
   outline: 2px dotted blue; }
 
+.catalog {
+  font-size: 0; }
+
 .catalog_car {
+  position: relative;
   display: inline-block;
   width: 33.33%;
-  margin-left: -5px;
-  outline: 1px solid green; }
+  overflow: hidden; }
   .catalog_car:nth-child(3n+1) {
-    margin-left: 0;
-    outline: 1px solid blue; }
-  .catalog_car img {
-    display: block;
-    width: 100%; }
+    margin-left: 0; }
+  .catalog_car:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.5s; }
+
+.catalog_car_picture img {
+  display: block;
+  width: 100%; }
+
+.catalog_car_info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  font-size: 18pxpx;
+  font-size: 1rem;
+  transition: all 0.5s;
+  z-index: 2; }
+
+.catalog_car_info_price-daily {
+  padding-top: 20px;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif; }
+  .catalog_car_info_price-daily span {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: line-through;
+    color: #f2462e;
+    transition: all 0.5s; }
+
+.catalog_car_info_price-special {
+  padding-top: 10px;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif; }
+  .catalog_car_info_price-special span {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+    color: #fff; }
+
+.catalog_car_continue {
+  position: absolute;
+  left: 0;
+  bottom: -250px;
+  padding: 20px;
+  font-size: 21.6pxpx;
+  font-size: 1.2rem;
+  transition: all 0.5s;
+  z-index: 2; }
+  .catalog_car_continue a {
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #fff; }
+    .catalog_car_continue a:after {
+      content: '\f105';
+      padding-left: 15px;
+      font-family: FontAwesome;
+      text-decoration: none; }
+    .catalog_car_continue a:hover {
+      color: #000; }
+
+.catalog_car:hover:after {
+  background: rgba(242, 70, 46, 0.8); }
+.catalog_car:hover .catalog_car_info {
+  bottom: 40px; }
+.catalog_car:hover .catalog_car_info_price-daily span {
+  color: #fff; }
+.catalog_car:hover .catalog_car_continue {
+  bottom: 0; }
 
 .footer {
   width: 100%; }

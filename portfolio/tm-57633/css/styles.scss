@@ -5,8 +5,10 @@ $fontSizeDefault: 18px;
 
 $colorWhite: #fff;
 $colorBlack: #000;
+$colorBlackTr: rgba(0, 0, 0, 0.3);
 
-$colorRed: rgb(242, 70, 46);
+$colorRed: rgba(242, 70, 46, 1.0);
+$colorRedTr: rgba(242, 70, 46, 0.8);
 /* MIXINS */
   @mixin font-size($sizeValue: 1) {
     font-size: ($sizeValue * $fontSizeDefault) + px;
@@ -48,9 +50,15 @@ $colorRed: rgb(242, 70, 46);
     @include font-size(2.4);
   }
 
-  h5 {
-    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  h4 {
   }
+
+  h5 {
+    @include font-size(1.4);
+    font-weight: normal;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  }
+
 /* MAIN LAYOUT */
   .wrapper-all {
     width: 100%;
@@ -278,23 +286,135 @@ $colorRed: rgb(242, 70, 46);
     outline: 2px dotted blue;
   }
 
+  .catalog {
+    font-size: 0;
+  }
+
   .catalog_car {
+    position: relative;
     display: inline-block;
     width: 33.33%;
-    margin-left: -5px;
+    overflow: hidden;
     //height: 200px;
-    outline: 1px solid green;
+    //outline: 1px solid green;
 
     &:nth-child(3n+1) {
       margin-left: 0;
-      outline: 1px solid blue;
+      //outline: 1px solid blue;
     }
 
+    &:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: '';
+      //display: inline-block;
+      width: 100%;
+      height: 100%;
+      background:$colorBlackTr;
+      transition: all 0.5s;
+      //outline: 3px solid yellow;
+    }
+  }
+
+  .catalog_car_picture {
     img {
       display: block;
       width: 100%;
     }
   }
+
+  .catalog_car_info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    //height: 100%;
+    padding: 20px;
+    @include font-size(1);
+    transition: all 0.5s;
+    z-index: 2;
+    //outline: 2px dotted silver;
+  }
+
+  .catalog_car_info_title {
+    //@include font-size(1);
+    //font-weight: bold;
+    //text-decoration: uppercase;
+    //padding-bottom: 20px;
+  }
+
+  .catalog_car_info_price-daily {
+    padding-top: 20px;
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+
+    span {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: bold;
+      text-decoration: line-through;
+      color: $colorRed;
+      transition: all 0.5s;
+    }
+  }
+
+  .catalog_car_info_price-special {
+    padding-top: 10px;
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+
+    span {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: bold;
+      color: $colorWhite;
+    }
+  }
+
+  .catalog_car_continue {
+    position: absolute;
+    left: 0;
+    bottom: -250px;
+    padding: 20px;
+    //margin-top: 20px;
+    @include font-size(1.2);
+    transition: all 0.5s;
+    z-index: 2;
+    //text-decoration: underline;
+
+    a {
+      font-family: 'Raleway', Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      color: $colorWhite;
+
+      &:after {
+        content: '\f105';
+        padding-left: 15px;
+        font-family: FontAwesome;
+        text-decoration: none;
+      }
+
+      &:hover {
+        color: $colorBlack;
+      }
+    }
+  }
+
+  .catalog_car:hover {
+
+    &:after {
+      background:$colorRedTr;
+    }
+
+    .catalog_car_info {
+      bottom: 40px;
+    }
+
+    .catalog_car_info_price-daily span {
+      color: $colorWhite;
+    }
+    .catalog_car_continue {
+      bottom: 0;
+    }
+  }
+
 
   .footer {
     width: 100%;
