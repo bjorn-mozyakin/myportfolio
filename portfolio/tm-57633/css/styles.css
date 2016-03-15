@@ -84,12 +84,13 @@ h4 {
 .top-panel {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 100px;
   box-sizing: border-box;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 100px 60px 0;
+  padding: 0 60px;
+  outline: 5px solid red;
   z-index: 2; }
 
 .top-panel_logo {
@@ -97,7 +98,7 @@ h4 {
 
 .top-panel_logo_title {
   display: table-cell;
-  height: 100px;
+  height: 60px;
   vertical-align: middle; }
   .top-panel_logo_title:before {
     content: '';
@@ -114,7 +115,7 @@ h4 {
 
 .nav_menu {
   display: table-cell;
-  height: 100px;
+  height: 60px;
   vertical-align: middle;
   margin: 0;
   padding: 0;
