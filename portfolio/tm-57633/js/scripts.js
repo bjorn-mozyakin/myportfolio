@@ -12,8 +12,10 @@ $(document).ready(function(){
   Document.prototype.onscroll = function(e) {
     if ( $(this.elem).scrollTop() >= this.offsetYTopPanel ) {
       this.attachTopPanel();
+      this.showScrollTopButton();
     } else {
       this.detachTopPanel();
+      this.hideScrollTopButton();
     }
   }
 
@@ -35,65 +37,27 @@ $(document).ready(function(){
     });
   };
 
+  Document.prototype.showScrollTopButton = function() {
+    $('.scroll-top-button').fadeIn(500);
+  };
+
+  Document.prototype.hideScrollTopButton = function() {
+    $('.scroll-top-button').fadeOut(500);
+  };
 /* END Constructor Document */
 
-/* BEGIN Constructor Slideshow*/
-  function Slideshow(options) {
-    this._BANNER_NUM = 3;
-
+/* BEGIN Constructor ScrollTopButton */
+  function ScrollTopButton(options) {
     this.elem = options.elem;
     this.elem.onclick = this.onclick.bind(this);
   }
 
-  Slideshow.prototype.onclick = function(e) {
-    e = e || window.event;
-    var target = e.target || e.srcElement; //for IE8
-
-    if ($(target).hasClass('arrow-left')) {
-      this.showPrevBanner();
-      return;
-    }
-
-    if ($(target).hasClass('arrow-right')) {
-      this.showNextBanner();
-      return;
-    }
+  ScrollTopButton.prototype.onclick = function(e) {
+    $('html, body').animate({
+      'scrollTop': 0
+    }, 500)
   }
-
-  Slideshow.prototype.showPrevBanner = function() {
-    var bannum = $('.banner_active').data('bannum');
-
-    this._removeActiveClass();
-
-    bannum--;
-    if (bannum < 1) bannum = this._BANNER_NUM;
-
-    this._addActiveClass(bannum);
-  }
-
-  Slideshow.prototype.showNextBanner = function() {
-    var bannum = $('.banner_active').data('bannum');
-
-    this._removeActiveClass();
-
-    bannum++;
-    if (bannum > this._BANNER_NUM) bannum = 1;
-
-    this._addActiveClass(bannum);
-  }
-
-  Slideshow.prototype._removeActiveClass = function() {
-    $('.banner_active').removeClass('banner_active');
-    $('.caption_active').removeClass('caption_active');
-    $('.switch_active').removeClass('switch_active');
-  }
-
-  Slideshow.prototype._addActiveClass = function(num) {
-    $('[data-bannum=' + num + ']').addClass('banner_active');
-    $('[data-capnum=' + num + ']').addClass('caption_active');
-    $('[data-swnum=' + num + ']').addClass('switch_active');
-  }
-/* END Constructor Slideshow*/
+/* END Constructor ScrollTopButton */
 
 /* BEGIN Constructor Menu*/
   function Menu(options) {
@@ -158,12 +122,76 @@ $(document).ready(function(){
   }
 /* END Constructor Menu*/
 
+/* BEGIN Constructor Slideshow*/
+  function Slideshow(options) {
+    this._BANNER_NUM = 3;
+
+    this.elem = options.elem;
+    this.elem.onclick = this.onclick.bind(this);
+  }
+
+  Slideshow.prototype.onclick = function(e) {
+    e = e || window.event;
+    var target = e.target || e.srcElement; //for IE8
+
+    if ($(target).hasClass('arrow-left')) {
+      this.showPrevBanner();
+      return;
+    }
+
+    if ($(target).hasClass('arrow-right')) {
+      this.showNextBanner();
+      return;
+    }
+  }
+
+  Slideshow.prototype.showPrevBanner = function() {
+    var bannum = $('.banner_active').data('bannum');
+
+    this._removeActiveClass();
+
+    bannum--;
+    if (bannum < 1) bannum = this._BANNER_NUM;
+
+    this._addActiveClass(bannum);
+  }
+
+  Slideshow.prototype.showNextBanner = function() {
+    var bannum = $('.banner_active').data('bannum');
+
+    this._removeActiveClass();
+
+    bannum++;
+    if (bannum > this._BANNER_NUM) bannum = 1;
+
+    this._addActiveClass(bannum);
+  }
+
+  Slideshow.prototype._removeActiveClass = function() {
+    $('.banner_active').removeClass('banner_active');
+    $('.caption_active').removeClass('caption_active');
+    $('.switch_active').removeClass('switch_active');
+  }
+
+  Slideshow.prototype._addActiveClass = function(num) {
+    $('[data-bannum=' + num + ']').addClass('banner_active');
+    $('[data-capnum=' + num + ']').addClass('caption_active');
+    $('[data-swnum=' + num + ']').addClass('switch_active');
+  }
+/* END Constructor Slideshow*/
+
+
   var mainDocument = new Document({
     elem: $(document)[0]
   });
 
   var mainMenu = new Menu({
     elem: $('.nav_menu')[0]
+  });
+
+
+  var scrollTopButton = new ScrollTopButton({
+    elem: $('.scroll-top-button')[0]
   });
 
   var slideshow = new Slideshow({
