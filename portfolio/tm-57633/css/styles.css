@@ -5,7 +5,7 @@
 body {
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: normal;
-  font-size: 18pxpx;
+  font-size: 18px;
   font-size: 1rem;
   color: #fff;
   background: #000; }
@@ -24,21 +24,21 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase; }
 
 h1 {
-  font-size: 63pxpx;
+  font-size: 63px;
   font-size: 3.5rem; }
 
 h2 {
-  font-size: 43.2pxpx;
+  font-size: 43.2px;
   font-size: 2.4rem; }
 
 h3 {
-  font-size: 25.2pxpx;
+  font-size: 25.2px;
   font-size: 1.4rem;
   font-weight: normal;
   font-family: 'Montserrat', Helvetica, Arial, sans-serif; }
 
 h4 {
-  font-size: 21.6pxpx;
+  font-size: 21.6px;
   font-size: 1.2rem;
   font-weight: normal;
   font-family: 'Montserrat', Helvetica, Arial, sans-serif; }
@@ -130,6 +130,10 @@ h4 {
       text-transform: uppercase;
       text-decoration: none;
       color: #fff;
+      -webkit-transition: color 0.5s;
+      -moz-transition: color 0.5s;
+      -ms-transition: color 0.5s;
+      -o-transition: color 0.5s;
       transition: color 0.5s; }
       .nav_menu_item_link:hover, .nav_menu_item_link.active {
         color: #f2462e; }
@@ -241,7 +245,7 @@ h4 {
       transition: 1s opacity; }
       .slideshow_captions .caption_info {
         font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-        font-size: 23.4pxpx;
+        font-size: 23.4px;
         font-size: 1.3rem;
         color: #f2462e; }
     .slideshow_captions .caption_active {
@@ -257,7 +261,7 @@ h4 {
     .slideshow_arrows .arrow-left:before {
       content: '\f104';
       font-family: FontAwesome;
-      font-size: 36pxpx;
+      font-size: 36px;
       font-size: 2rem; }
   .slideshow_arrows .arrow-right {
     position: absolute;
@@ -269,7 +273,7 @@ h4 {
     .slideshow_arrows .arrow-right:after {
       content: '\f105';
       font-family: FontAwesome;
-      font-size: 36pxpx;
+      font-size: 36px;
       font-size: 2rem; }
 
 /* END slideshow */
@@ -288,7 +292,7 @@ h4 {
   display: inline-block;
   padding: 0 60px;
   width: 50%;
-  font-size: 18pxpx;
+  font-size: 18px;
   font-size: 1rem;
   line-height: 1.5;
   vertical-align: middle; }
@@ -332,7 +336,7 @@ h4 {
   padding: 0 60px;
   margin-left: -5px;
   width: 50%;
-  font-size: 18pxpx;
+  font-size: 18px;
   font-size: 1rem;
   line-height: 1.5;
   vertical-align: middle;
@@ -356,6 +360,10 @@ h4 {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s; }
 
 .catalog_car_picture img {
@@ -368,8 +376,12 @@ h4 {
   bottom: 0;
   width: 100%;
   padding: 20px;
-  font-size: 18pxpx;
+  font-size: 18px;
   font-size: 1rem;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 2; }
 
@@ -381,6 +393,10 @@ h4 {
     font-weight: bold;
     text-decoration: line-through;
     color: #f2462e;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s; }
 
 .catalog_car_info_price-special {
@@ -396,8 +412,12 @@ h4 {
   left: 0;
   bottom: -250px;
   padding: 20px;
-  font-size: 21.6pxpx;
+  font-size: 21.6px;
   font-size: 1.2rem;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 2; }
   .catalog_car_continue a {
@@ -423,79 +443,81 @@ h4 {
 
 .footer {
   width: 100%; }
+  .footer_contacts {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0 60px;
+    width: 50%;
+    font-size: 18px;
+    font-size: 1rem;
+    line-height: 1.8;
+    vertical-align: middle; }
+    .footer_contacts_address:before {
+      content: '\f041';
+      padding-right: 30px;
+      font-family: FontAwesome;
+      font-size: 28.8px;
+      font-size: 1.6rem; }
+    .footer_contacts_phone:before {
+      content: '\f095';
+      padding-right: 30px;
+      font-family: FontAwesome;
+      font-size: 28.8px;
+      font-size: 1.6rem; }
+    .footer_contacts_email:before {
+      content: '\f0e0';
+      padding-right: 30px;
+      font-family: FontAwesome;
+      font-size: 28.8px;
+      font-size: 1.6rem; }
+    .footer_contacts_wh:before {
+      content: '\f017';
+      padding-right: 30px;
+      font-family: FontAwesome;
+      font-size: 28.8px;
+      font-size: 1.6rem; }
+    .footer_contacts_sb_icon {
+      padding-right: 30px;
+      font-family: FontAwesome;
+      font-size: 28.8px;
+      font-size: 1.6rem;
+      cursor: pointer; }
+      .footer_contacts_sb_icon:last-child {
+        padding-right: 0; }
+    .footer_contacts_sb_fb:before {
+      content: '\f09a';
+      -webkit-transition: color 0.5s;
+      -moz-transition: color 0.5s;
+      -ms-transition: color 0.5s;
+      -o-transition: color 0.5s;
+      transition: color 0.5s; }
+    .footer_contacts_sb_fb:hover:before {
+      color: #00137F; }
+    .footer_contacts_sb_tw:before {
+      content: '\f099';
+      -webkit-transition: color 0.5s;
+      -moz-transition: color 0.5s;
+      -ms-transition: color 0.5s;
+      -o-transition: color 0.5s;
+      transition: color 0.5s; }
+    .footer_contacts_sb_tw:hover:before {
+      color: #0094FF; }
+    .footer_contacts_sb_g:before {
+      content: '\f0d5';
+      -webkit-transition: color 0.5s;
+      -moz-transition: color 0.5s;
+      -ms-transition: color 0.5s;
+      -o-transition: color 0.5s;
+      transition: color 0.5s; }
+    .footer_contacts_sb_g:hover:before {
+      color: #FF0000; }
 
-.footer_contacts {
-  box-sizing: border-box;
-  display: inline-block;
-  padding: 0 60px;
-  width: 50%;
-  font-size: 18pxpx;
-  font-size: 1rem;
-  line-height: 2;
-  vertical-align: middle; }
-
-.footer_contacts_address:before {
-  content: '\f041';
-  padding-right: 30px;
-  font-family: FontAwesome;
-  font-size: 28.8pxpx;
-  font-size: 1.6rem; }
-
-.footer_contatcs_phone:before {
-  content: '\f095';
-  padding-right: 30px;
-  font-family: FontAwesome;
-  font-size: 28.8pxpx;
-  font-size: 1.6rem; }
-
-.footer_contatcs_email:before {
-  content: '\f0e0';
-  padding-right: 30px;
-  font-family: FontAwesome;
-  font-size: 28.8pxpx;
-  font-size: 1.6rem; }
-
-.footer_contatcs_wh:before {
-  content: '\f017';
-  padding-right: 30px;
-  font-family: FontAwesome;
-  font-size: 28.8pxpx;
-  font-size: 1.6rem; }
-
-.footer_contatcs_sb_icon {
-  padding-right: 30px;
-  font-family: FontAwesome;
-  font-size: 28.8pxpx;
-  font-size: 1.6rem;
-  cursor: pointer; }
-  .footer_contatcs_sb_icon:last-child {
-    padding-right: 0; }
-
-.footer_contatcs_sb_fb:before {
-  content: '\f09a';
-  transition: color 0.5s; }
-
-.footer_contatcs_sb_fb:hover:before {
-  color: #00137F; }
-
-.footer_contatcs_sb_tw:before {
-  content: '\f099';
-  transition: color 0.5s; }
-
-.footer_contatcs_sb_tw:hover:before {
-  color: #0094FF; }
-
-.footer_contatcs_sb_g:before {
-  content: '\f0d5';
-  transition: color 0.5s; }
-
-.footer_contatcs_sb_g:hover:before {
-  color: #FF0000; }
-
-.footer-map {
+.footer_map {
   display: inline-block;
   margin-left: -5px;
-  width: 50%; }
+  width: 50%;
+  height: 500px;
+  vertical-align: middle; }
 
 /* OTHER STYLES */
 .clearfix:after {

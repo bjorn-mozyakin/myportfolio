@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* VARIABLES */
   $widthMax: 1400px;
-  $fontSizeDefault: 18px;
+  $fontSizeDefault: 18;
 
   $colorWhite: #fff;
   $colorBlack: #000;
@@ -196,7 +196,7 @@
         text-transform: uppercase;
         text-decoration: none;
         color: $colorWhite;
-        transition: color 0.5s;
+        @include transition(color 0.5s);
 
         &:hover,
         &.active {
@@ -493,7 +493,7 @@
       width: 100%;
       height: 100%;
       background:$colorBlackTr;
-      transition: all 0.5s;
+      @include transition(all 0.5s);
       //outline: 3px solid yellow;
     }
   }
@@ -513,7 +513,7 @@
     //height: 100%;
     padding: 20px;
     @include font-size(1);
-    transition: all 0.5s;
+    @include transition(all 0.5s);
     z-index: 2;
     //outline: 2px dotted silver;
   }
@@ -534,7 +534,7 @@
       font-weight: bold;
       text-decoration: line-through;
       color: $colorRed;
-      transition: all 0.5s;
+      @include transition(all 0.5s);
     }
   }
 
@@ -556,7 +556,7 @@
     padding: 20px;
     //margin-top: 20px;
     @include font-size(1.2);
-    transition: all 0.5s;
+    @include transition(all 0.5s);
     z-index: 2;
     //text-decoration: underline;
 
@@ -599,93 +599,100 @@
 
   .footer {
     width: 100%;
-  }
 
-  .footer_contacts {
-    box-sizing: border-box;
-    display: inline-block;
-    padding: 0 60px;
-    width: 50%;
-    @include font-size(1);
-    line-height: 2;
-    vertical-align: middle;
-    //outline: 2px dotted blue;
-  }
+    &_contacts {
+      box-sizing: border-box;
+      display: inline-block;
+      padding: 0 60px;
+      width: 50%;
+      @include font-size(1);
+      line-height: 1.8;
+      vertical-align: middle;
 
-  .footer_contacts_address:before {
-    content: '\f041';
-    padding-right: 30px;
-    font-family: FontAwesome;
-    @include font-size(1.6);
-  }
+      &_address:before {
+        content: '\f041';
+        padding-right: 30px;
+        font-family: FontAwesome;
+        @include font-size(1.6);
+      }
 
-  .footer_contatcs_phone:before {
-    content: '\f095';
-    padding-right: 30px;
-    font-family: FontAwesome;
-    @include font-size(1.6);
-  }
+      &_phone:before {
+        content: '\f095';
+        padding-right: 30px;
+        font-family: FontAwesome;
+        @include font-size(1.6);
+      }
 
-  .footer_contatcs_email:before {
-    content: '\f0e0';
-    padding-right: 30px;
-    font-family: FontAwesome;
-    @include font-size(1.6);
-  }
+      &_email:before {
+        content: '\f0e0';
+        padding-right: 30px;
+        font-family: FontAwesome;
+        @include font-size(1.6);
+      }
 
-  .footer_contatcs_wh:before {
-    content: '\f017';
-    padding-right: 30px;
-    font-family: FontAwesome;
-    @include font-size(1.6);
-  }
+      &_wh:before {
+        content: '\f017';
+        padding-right: 30px;
+        font-family: FontAwesome;
+        @include font-size(1.6);
+      }
 
-  .footer_contatcs_sb_icon {
-    padding-right: 30px;
-    font-family: FontAwesome;
-    @include font-size(1.6);
-    cursor: pointer;
+      &_sb_icon {
+        padding-right: 30px;
+        font-family: FontAwesome;
+        @include font-size(1.6);
+        cursor: pointer;
 
-    &:last-child {
-      padding-right: 0;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+
+      &_sb_fb:before {
+        content: '\f09a';
+        @include transition(color 0.5s);
+      }
+
+      &_sb_fb:hover:before {
+        color: #00137F;
+      }
+
+      &_sb_tw:before {
+        content: '\f099';
+        @include transition(color 0.5s);
+      }
+
+      &_sb_tw:hover:before {
+        color: #0094FF;
+      }
+
+      &_sb_g:before {
+        content: '\f0d5';
+        @include transition(color 0.5s);
+      }
+
+      &_sb_g:hover:before {
+        color: #FF0000;
+      }
+        //outline: 2px dotted blue;
     }
   }
 
-  .footer_contatcs_sb_fb:before {
-    content: '\f09a';
-    transition: color 0.5s;
-  }
 
-  .footer_contatcs_sb_fb:hover:before {
-    color: #00137F;
-  }
-
-  .footer_contatcs_sb_tw:before {
-    content: '\f099';
-    transition: color 0.5s;
-  }
-
-  .footer_contatcs_sb_tw:hover:before {
-    color: #0094FF;
-  }
-
-  .footer_contatcs_sb_g:before {
-    content: '\f0d5';
-    transition: color 0.5s;
-  }
-
-  .footer_contatcs_sb_g:hover:before {
-    color: #FF0000;
-  }
-
-  .footer-map {
+  .footer_map {
     display: inline-block;
     margin-left: -5px;
     width: 50%;
+    height: 500px;
+    vertical-align: middle;
+    //outline: 20px solid lime;
+    //width: 200px;
+//    z-index: 9999999;
   }
 
 
 /* OTHER STYLES */
+
   .clearfix:after {
     content: '';
     clear: both;
