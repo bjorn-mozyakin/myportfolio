@@ -1,7 +1,43 @@
 $(document).ready(function(){
 
 /* CONSTRUCTORS */
-/* Constructor Slideshow*/
+
+/* BEGIN Constructor Document */
+  function Document(options) {
+    this.elem = options.elem;
+    this.offsetYTopPanel = $('.top-panel').offset().top;
+    this.elem.onscroll = this.onscroll.bind(this);
+  }
+
+  Document.prototype.onscroll = function(e) {
+    if ( $(this.elem).scrollTop() >= this.offsetYTopPanel ) {
+      this.attachTopPanel();
+    } else {
+      this.detachTopPanel();
+    }
+  }
+
+  Document.prototype.attachTopPanel = function() {
+    $('.top-panel').css({
+      'position':'fixed',
+      'left': '0',
+      'top': '0',
+      'background': '#000'
+    });
+  };
+
+  Document.prototype.detachTopPanel = function() {
+    $('.top-panel').css({
+      'position':'',
+      'left': '',
+      'top': '',
+      'background': ''
+    });
+  };
+
+/* END Constructor Document */
+
+/* BEGIN Constructor Slideshow*/
   function Slideshow(options) {
     this._BANNER_NUM = 3;
 
@@ -59,7 +95,7 @@ $(document).ready(function(){
   }
 /* END Constructor Slideshow*/
 
-/* Constructor Menu*/
+/* BEGIN Constructor Menu*/
   function Menu(options) {
     this.elem = options.elem;
     this.timerSubMenu = this.timerSubSubmenu = null;
@@ -122,6 +158,14 @@ $(document).ready(function(){
   }
 /* END Constructor Menu*/
 
+  var mainDocument = new Document({
+    elem: $(document)[0]
+  });
+
+  var mainMenu = new Menu({
+    elem: $('.nav_menu')[0]
+  });
+
   var slideshow = new Slideshow({
     elem: $('.slideshow')[0]
   });
@@ -131,9 +175,6 @@ $(document).ready(function(){
   $(window).on('resize', getSizes);
 
 
-  var mainMenu = new Menu({
-    elem: $('.nav_menu')[0]
-  });
 
 
 /* ADDITIONAL FUNCTIONS */
