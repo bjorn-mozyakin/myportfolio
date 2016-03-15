@@ -8,7 +8,6 @@
   $colorBlackTr: rgba(0, 0, 0, 0.3);
 
   $colorRed: rgba(242, 70, 46, 1.0);
-  $colorRedTr: rgba(242, 70, 46, 0.8);
 
 /*MIXINS*/
   @mixin font-size($sizeValue: 1) {
@@ -23,6 +22,13 @@
     -o-transition: $args;
     transition: $args;
   }
+
+  @mixin opacity($opacity) {
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+    opacity: $opacity;
+  }
+
 /* FONTS */
 
 /* COMMON STYLES */
@@ -136,13 +142,13 @@
     max-width: $widthMax;
     margin: 0 auto;
     padding: 100px 60px 0;
-    outline: 5px solid red;
+    //outline: 5px solid red;
     z-index: 2;
   }
 
   .top-panel_logo {
     float: left;
-    outline: 2px dashed green;
+    //outline: 2px dashed green;
   }
 
   .top-panel_logo_title {
@@ -164,76 +170,115 @@
 
   .top-panel_nav {
     float: right;
-    outline: 2px dashed green;
+    //outline: 2px dashed green;
   }
 
-  .top-panel_nav_menu {
+  .nav_menu {
     display: table-cell;
     height: 100px;
     vertical-align: middle;
     margin: 0;
     padding: 0;
     list-style-type: none;
-    outline: 2px solid orange;
-  }
+    //outline: 2px solid orange;
 
-  .top-panel_nav_menu_item {
-    display: inline-block;
-    padding-right: 60px;
-    outline: 2px solid blue;
-  }
+    &_item {
+      display: inline-block;
+      padding-right: 60px;
+      //outline: 2px solid blue;
 
-  .top-panel_nav_menu_item:last-child {
-    padding-right: 0px;
-  }
+      &:last-child {
+        padding-right: 0px;
+      }
 
+      &_link {
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $colorWhite;
+        transition: color 0.5s;
 
-  .top-panel_nav_menu_item_link {
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $colorWhite;
-    transition: color 0.5s;
-
-    &:hover,
-    &.active {
-      color: $colorRed;
+        &:hover,
+        &.active {
+          color: $colorRed;
+        }
+      }
     }
   }
 
-  .top-panel_nav_menu_item_has-submenu {
+  .nav_menu_item_has-submenu {
     position: relative;
-    outline: 2px solid maroon;
+    //outline: 2px solid maroon;
   }
 
-  .top-panel_nav_menu_item_submenu {
+  .nav_menu_item_submenu {
+    display: none;
+    //box-sizing: border-box;
     position: absolute;
     left: 0;
     top: 100%;
     margin: 40px 0 0;
-    padding: 20px 0;
+    padding: 30px 0;
     list-style-type: none;
-    background:gray;
-    outline: 2px solid blue;
+    background: $colorBlack;
+    //height: 100%;
+    //outline: 2px solid blue;
+
+    &_subitem {
+      padding: 10px 40px;
+
+      &_link {
+        //display: block;
+        //padding: 15px 40px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $colorWhite;
+        @include transition(color 0.5s);
+
+        &:hover {
+          color: $colorRed;
+        }
+      }
+    }
   }
 
-  .top-panel_nav_menu_item_submenu_subitem {
-    a {
-      display: block;
-      padding: 15px 40px;
-      font-weight: bold;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: $colorWhite;
+  .nav_menu_item_submenu_subitem_has-submenu {
+    position: relative;
+  }
 
-      &:hover {
-        color: $colorRed;
+  .nav_menu_item_submenu_subitem_subsubmenu {
+    display: none;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background: $colorBlack;
+
+    &_subitem {
+      padding: 10px 40px;
+
+      &_link {
+        //display: block;
+        //padding: 15px 40px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $colorWhite;
+        @include transition(color 0.5s);
+        //outline: 1px solid red;
+
+        &:hover {
+          color: $colorRed;
+        }
       }
     }
   }
 /* END top-panel */
 
-/* BEGIN SLIDESHOW */
+/* BEGIN slideshow */
   .slideshow {
     position: absolute;
     width: 100%;
@@ -249,18 +294,20 @@
       z-index: 1;
 
       .banner {
-        position: relative;
+        position: absolute;
         left: 0px;
         top: 0px;
         display: block;
         width: 100%;
         opacity: 0;
+        @include opacity(0);
         @include transition(1s opacity);
         //opacity: 20px solid blue;
       }
 
       .banner_active {
-        opacity: 1;
+        //opacity: 1;
+        @include opacity(0.7);
       }
     }
 
@@ -274,20 +321,25 @@
       //outline: 10px solid red;
 
       .caption {
-        //box-sizing: border-box;
         position: absolute;
         left: 0;
         top: 50%;
         margin-top: 0px;
         width: 100%;
         text-align: center;
-        opacity: 0;
+        @include opacity(0);
         @include transition(1s opacity);
-        outline: 10px solid green;
+        //outline: 10px solid green;
+
+        &_info {
+          font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+          @include font-size(1.3);
+          color: $colorRed;
+        }
       }
 
       .caption_active {
-        opacity: 1;
+        @include opacity(1);
       }
     }
 
@@ -296,11 +348,11 @@
         position: absolute;
         top: 50%;
         left: 10px;
-        height: 100%;
+        //height: 100%;
+        //height: 80px;
         width: 18px;
-        height: 80px;
         cursor: pointer;
-        outline: 5px solid yellow;
+        //outline: 5px solid yellow;
         z-index: 2;
 
         &:before {
@@ -314,9 +366,9 @@
         position: absolute;
         top: 50%;
         right: 10px;
-        height: 100%;
+        //height: 100%;
+        //height: 80px;
         width: 18px;
-        height: 80px;
         cursor: pointer;
         //outline: 5px solid yellow;
         z-index: 2;
@@ -330,7 +382,7 @@
       }
     }
   }
-/* END SLIDESHOW */
+/* END slideshow */
 
 /* BEGIN welcome */
   .welcome {
@@ -529,7 +581,7 @@
   .catalog_car:hover {
 
     &:after {
-      background:$colorRedTr;
+      background: transparentize($colorRed, 0.2);
     }
 
     .catalog_car_info {
@@ -557,7 +609,7 @@
     @include font-size(1);
     line-height: 2;
     vertical-align: middle;
-    outline: 2px dotted blue;
+    //outline: 2px dotted blue;
   }
 
   .footer_contacts_address:before {
