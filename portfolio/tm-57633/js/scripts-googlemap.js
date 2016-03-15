@@ -10,6 +10,7 @@ $(document).ready(function(){
     var mapOptions = {
         zoom: 14,
         center: companyPos,
+        scrollwheel: false,
         mapTypeControl: true,
         mapTypeControlOptions: {
           style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
