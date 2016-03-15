@@ -12,7 +12,12 @@ body {
 
 a {
   text-decoration: none;
-  color: #fff; }
+  color: #fff;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s; }
   a:hover {
     color: #f2462e; }
 
@@ -80,6 +85,9 @@ h4 {
   margin: 0 auto; }
 
 /* MAIN STYLES */
+.header {
+  position: relative; }
+
 /* BEGIN top-panel */
 .top-panel {
   position: absolute;
@@ -90,8 +98,7 @@ h4 {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 60px;
-  outline: 5px solid red;
-  z-index: 2; }
+  z-index: 10; }
 
 .top-panel_logo {
   float: left; }
@@ -314,6 +321,7 @@ h4 {
     margin-top: -385px; }
 
 /* END welcome */
+/* BEGIN About */
 .about_picture {
   display: inline-block;
   width: 50%;
@@ -341,7 +349,11 @@ h4 {
   line-height: 1.5;
   vertical-align: middle;
   color: #000; }
+  .about_info .info_subtitle {
+    color: #f2462e; }
 
+/* END About */
+/* BEGIN  Catalog */
 .catalog {
   font-size: 0; }
 
@@ -441,6 +453,8 @@ h4 {
 .catalog_car:hover .catalog_car_continue {
   bottom: 0; }
 
+/* END Catalog */
+/* BEGIN Footer */
 .footer {
   width: 100%; }
   .footer_contacts {
@@ -464,6 +478,11 @@ h4 {
       font-family: FontAwesome;
       font-size: 28.8px;
       font-size: 1.6rem; }
+    .footer_contacts_email a {
+      text-decoration: underline;
+      color: #f2462e; }
+      .footer_contacts_email a:hover {
+        color: #fff; }
     .footer_contacts_email:before {
       content: '\f0e0';
       padding-right: 30px;
@@ -519,6 +538,7 @@ h4 {
   height: 500px;
   vertical-align: middle; }
 
+/* END Footer */
 /* OTHER STYLES */
 .clearfix:after {
   content: '';

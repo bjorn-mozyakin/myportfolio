@@ -43,6 +43,7 @@
   a {
     text-decoration: none;
     color: $colorWhite;
+    @include transition(color 0.5s);
 
     &:hover {
       color: $colorRed;
@@ -127,7 +128,7 @@
 /* MAIN STYLES */
 
   .header {
-    //position: relative;
+    position: relative;
     //height: 500px;
     //min-height: 100%;
   }
@@ -142,8 +143,8 @@
     max-width: $widthMax;
     margin: 0 auto;
     padding: 0 60px;
-    outline: 5px solid red;
-    z-index: 2;
+    // outline: 5px solid red;
+    z-index: 10;
   }
 
   .top-panel_logo {
@@ -433,6 +434,7 @@
   }
 /* END welcome */
 
+/* BEGIN About */
   .about_picture {
     display: inline-block;
     width: 50%;
@@ -465,8 +467,14 @@
     vertical-align: middle;
     color: $colorBlack;
     // outline: 2px dotted blue;
-  }
 
+    .info_subtitle {
+      color: $colorRed;
+    }
+  }
+/* END About */
+
+/* BEGIN  Catalog */
   .catalog {
     font-size: 0;
   }
@@ -518,13 +526,6 @@
     //outline: 2px dotted silver;
   }
 
-  .catalog_car_info_title {
-    //@include font-size(1);
-    //font-weight: bold;
-    //text-decoration: uppercase;
-    //padding-bottom: 20px;
-  }
-
   .catalog_car_info_price-daily {
     padding-top: 20px;
     font-family: 'Raleway', Helvetica, Arial, sans-serif;
@@ -558,7 +559,6 @@
     @include font-size(1.2);
     @include transition(all 0.5s);
     z-index: 2;
-    //text-decoration: underline;
 
     a {
       font-family: 'Raleway', Helvetica, Arial, sans-serif;
@@ -595,8 +595,9 @@
       bottom: 0;
     }
   }
+/* END Catalog */
 
-
+/* BEGIN Footer */
   .footer {
     width: 100%;
 
@@ -608,6 +609,7 @@
       @include font-size(1);
       line-height: 1.8;
       vertical-align: middle;
+
 
       &_address:before {
         content: '\f041';
@@ -621,6 +623,17 @@
         padding-right: 30px;
         font-family: FontAwesome;
         @include font-size(1.6);
+      }
+
+      &_email {
+        a {
+          text-decoration: underline;
+          color: $colorRed;
+
+          &:hover {
+            color: $colorWhite;
+          }
+        }
       }
 
       &_email:before {
@@ -674,10 +687,8 @@
       &_sb_g:hover:before {
         color: #FF0000;
       }
-        //outline: 2px dotted blue;
     }
   }
-
 
   .footer_map {
     display: inline-block;
@@ -685,11 +696,8 @@
     width: 50%;
     height: 500px;
     vertical-align: middle;
-    //outline: 20px solid lime;
-    //width: 200px;
-//    z-index: 9999999;
   }
-
+/* END Footer */
 
 /* OTHER STYLES */
 
