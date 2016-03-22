@@ -41,8 +41,7 @@ $(document).ready(function(){
     var marker = new google.maps.Marker({
       position: companyPos,
       map: map,
-      // icon: markerImage,
-      title:"Company Name Marker",
+      title:"Company Name Marker"
     });
 
     marker.setMap(map);
