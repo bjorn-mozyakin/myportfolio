@@ -12,8 +12,9 @@
 
   <!-- Imitation media quieries для IE9- -->
   <!--[if lte IE 9]>
-  <script src="js/respond.min.js"></script>
   <script src="js/html5shiv.js"></script>
+  <script src="js/es5-shim.min.js"></script>
+  <script src="js/respond.min.js"></script>
   <![endif]-->
   <script src="js/scripts.js"></script>
 
@@ -117,14 +118,16 @@
     </div>
     <div class="wrapper-about-outer">
       <div class="wrapper-about-inner">
-        <section class="about">
+        <section class="about clearfix">
+          <div class="about_info-wrapper">
+            <div class="about_info info">
+              <h1 class="info_title">About</h1>
+              <h4 class="info_subtitle">NUMBER 1 PROVIDER OF<br /> THE GRIPPING DRIVING EXPERIENCES</h4>
+              <p class="info_description">We extend red carpet service to all our clients. We are also happy to deliver your car to you anywhere. We are here to make your car hire experience the very best it can be. Our company is very competitive, that is why we are always trying very hard to keep our fleet of exotics and luxury cars the very best it could be with the latter models, best rates and service to our customer. We always strive to get the best customer service and your satisfaction is always our prime concern.</p>
+            </div>
+          </div>
           <div class="about_picture">
             <img src="images/page-1_img02.jpg" />
-          </div>
-          <div class="about_info info">
-            <h1 class="info_title">About</h1>
-            <h4 class="info_subtitle">NUMBER 1 PROVIDER OF<br /> THE GRIPPING DRIVING EXPERIENCES</h4>
-            <p class="info_description">We extend red carpet service to all our clients. We are also happy to deliver your car to you anywhere. We are here to make your car hire experience the very best it can be. Our company is very competitive, that is why we are always trying very hard to keep our fleet of exotics and luxury cars the very best it could be with the latter models, best rates and service to our customer. We always strive to get the best customer service and your satisfaction is always our prime concern.</p>
           </div>
         </section>
       </div>
@@ -200,7 +203,7 @@
       <div class="wrapper-footer-inner">
         <footer class="footer">
           <div class="footer_contacts">
-            <h1>Contacts</h1>
+            <h1 class="footer_contacts_header">Contacts</h1>
             <p class="footer_contacts_address">
               My Company Glasgow D04 89GR
             </p>

@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /* VARIABLES */
 /*MIXINS*/
-/* FONTS */
 /* COMMON STYLES */
 body {
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
@@ -208,8 +207,8 @@ h4 {
 .slideshow {
   position: absolute;
   width: 100%;
-  overflow: hidden;
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
   .slideshow_banners {
     width: 100%;
     position: absolute;
@@ -300,7 +299,7 @@ h4 {
 .welcome_info {
   box-sizing: border-box;
   display: inline-block;
-  padding: 0 60px;
+  padding: 60px;
   width: 50%;
   font-size: 18px;
   font-size: 1rem;
@@ -325,6 +324,37 @@ h4 {
 
 /* END welcome */
 /* BEGIN About */
+.about {
+  width: 100%;
+  font-size: 0; }
+  .about:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
+
+.about_info-wrapper {
+  float: right;
+  width: 50%;
+  height: 600px; }
+  .about_info-wrapper:before {
+    content: '';
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block; }
+
+.about_info {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 60px;
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 1.5;
+  vertical-align: middle;
+  color: #000; }
+  .about_info .info_subtitle {
+    color: #f2462e; }
+
 .about_picture {
   display: inline-block;
   width: 50%;
@@ -337,23 +367,9 @@ h4 {
     left: 50%;
     display: block;
     height: 770px;
-    width: 888px;
-    margin-left: -444px;
+    width: 960px;
+    margin-left: -480px;
     margin-top: -385px; }
-
-.about_info {
-  box-sizing: border-box;
-  display: inline-block;
-  padding: 0 60px;
-  margin-left: -5px;
-  width: 50%;
-  font-size: 18px;
-  font-size: 1rem;
-  line-height: 1.5;
-  vertical-align: middle;
-  color: #000; }
-  .about_info .info_subtitle {
-    color: #f2462e; }
 
 /* END About */
 /* BEGIN  Catalog */
@@ -467,6 +483,8 @@ h4 {
     font-size: 1rem;
     line-height: 1.8;
     vertical-align: middle; }
+    .footer_contacts_header {
+      margin: 20px 0; }
     .footer_contacts_address:before {
       content: '\f041';
       padding-right: 30px;
@@ -595,7 +613,11 @@ h4 {
       border-radius: 20px; }
 
   .nav_menu_item {
-    padding-right: 20px; } }
+    padding-right: 20px; }
+
+  .welcome_info,
+  .about_info {
+    padding: 20px; } }
 @media (max-width: 980px) {
   h1, h2, h3, h4 {
     text-align: center; }
@@ -617,21 +639,40 @@ h4 {
   .nav_menu_item {
     padding-right: 10px; }
 
-  .about_picture {
-    width: 100%;
-    height: 600px; }
-
-  .about_info {
-    width: 100%;
-    height: 100%; }
-
   .welcome_picture {
     width: 100%;
-    height: 600px; }
+    height: 100%; }
+    .welcome_picture img {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin-left: 0;
+      margin-top: 0; }
 
   .welcome_info {
     width: 100%;
     height: 100%; }
+
+  .about_info-wrapper {
+    float: none;
+    width: 100%;
+    height: 100%; }
+
+  .about_picture {
+    width: 100%;
+    height: 100%; }
+    .about_picture img {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin-left: 0;
+      margin-top: 0; }
 
   .catalog_car {
     width: 50%; }
@@ -834,5 +875,54 @@ h4 {
 
   .catalog_car {
     width: 100%; } }
+@media (max-width: 650px) {
+  h1 {
+    font-size: 43.2px;
+    font-size: 2.4rem;
+    line-height: 2.6rem; }
+
+  h2 {
+    font-size: 32.4px;
+    font-size: 1.8rem; } }
+@media (max-width: 550px) {
+  .slideshow_banners .banner {
+    height: 281px; }
+
+  .top-panel {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    padding: 0 10px; }
+
+  .caption_header {
+    margin: 0;
+    padding: 0;
+    padding: 0 10px; }
+
+  .caption_info {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    padding: 0 10px; }
+
+  .slideshow_arrows {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    width: 100px;
+    margin-left: -50px;
+    font-size: 0;
+    z-index: 2; }
+    .slideshow_arrows .arrow-left {
+      display: inline-block;
+      position: static;
+      padding-right: 64px;
+      width: 18px;
+      z-index: 2; }
+    .slideshow_arrows .arrow-right {
+      display: inline-block;
+      position: static;
+      width: 18px;
+      z-index: 2; } }
 
 /*# sourceMappingURL=styles.css.map */
