@@ -178,7 +178,10 @@ li {
         height: 150px;
         margin-right: 20px; }
         .works .work .work__main-info .work__main-info_img img {
-          border-radius: 5px; }
+          border-radius: 5px;
+          width: 200px;
+          height: 150px;
+          background: gray; }
       .works .work .work__main-info .work__main-info_name h2, .works .work .work__main-info .work__main-info_name h4 {
         margin: 0;
         padding: 0; }
